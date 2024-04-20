@@ -1,0 +1,140 @@
+/* Temel stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Beyaz arka plan */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1b5e20;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    background-color: #1b5e20;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.slider {
+    background-color: #f1f1f1; /* Slider arka plan rengi */
+    padding: 50px 0;
+}
+
+.categories {
+    background-color: #f9f9f9; /* Kategoriler arka plan rengi */
+    padding: 50px 0;
+}
+
+.about {
+    background-color: #e0e0e0; /* Hakkımızda arka plan rengi */
+    padding: 50px 0;
+}
+
+.contact {
+    background-color: #f1f1f1; /* İletişim arka plan rengi */
+    padding: 50px 0;
+}
+/* Temel stiller */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Beyaz arka plan */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #1b5e20;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    background-color: #1f5322;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.slider {
+    background-color: #f1f1f1; /* Slider arka plan rengi */
+    padding: 50px 0;
+}
+
+.categories {
+    background-color: #f9f9f9; /* Kategoriler arka plan rengi */
+    padding: 50px 0;
+}
+
+.about {
+    background-color: #e0e0e0; /* Hakkımızda arka plan rengi */
+    padding: 50px 0;
+}
+
+.contact {
+    background-color: #f1f1f1; /* İletişim arka plan rengi */
+    padding: 50px 0;
+}
