@@ -40,4 +40,40 @@ function changeLanguage(lang) {
             break;
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    showSlides();
+    displayDateTime();
+    changeLanguage();
+});
+
+var translations = {
+    en: {
+        welcomeMessage: "THIS SITE IS SPECIALLY PREPARED FOR BEGÜM SEYHAN..",
+        loveMessage: "I love you, my dear..",
+        aboutTitle: "About",
+        aboutText: "I have known my love for 6 years..."
+    },
+    tr: {
+        welcomeMessage: "BU SİTE BEGÜM SEYHAN İÇİN ÖZEL OLARAK HAZIRLANMIŞTIR..",
+        loveMessage: "Seni seviyorum sevgilim..",
+        aboutTitle: "Hakkında",
+        aboutText: "Sevgilimle 6 yıldır tanışıyoruz..."
+    },
+    de: {
+        welcomeMessage: "DIESE SEITE IST SPEZIELL FÜR BEGÜM SEYHAN VORBEREITET..",
+        loveMessage: "Ich liebe dich, mein Schatz..",
+        aboutTitle: "Über",
+        aboutText: "Ich kenne meine Liebe seit 6 Jahren..."
+    },
+    fr: {
+        welcomeMessage: "CE SITE EST SPÉCIALEMENT PRÉPARÉ POUR BEGÜM SEYHAN..",
+        loveMessage: "Je t'aime, mon cher..",
+        aboutTitle: "À propos",
+        aboutText: "Je connais mon amour depuis 6 ans..."
+    },
+    ru: {
+        welcomeMessage: "ЭТОТ САЙТ СПЕЦИАЛЬНО ПОДГОТОВЛЕН ДЛЯ БЕГЮМ СЕЙХАН..",
+        loveMessage: "Я люблю тебя, моя дорогая..",
+        aboutTitle: "О нас",
+        aboutText:
 
