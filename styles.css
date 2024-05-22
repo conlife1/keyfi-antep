@@ -141,3 +141,119 @@ body {
     padding: 10px 20px;
     font-size: 16px;
 }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#languageSelect {
+    margin-left: auto;
+    padding: 5px;
+}
+
+.date-time {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 250px; /* Resim genişliği 250px olarak sabitlendi */
+    overflow: hidden; /* Taşan resimleri gizler */
+}
+
+.mySlides {
+    display: none; /* Tüm slayt resimlerini varsayılan olarak gizler */
+    width: 100%; /* Resimlerin genişliği %100 olacak */
+    transition: opacity 1s ease; /* Geçiş efekti için ayar */
+}
+
+.fade {
+    opacity: 1; /* Başlangıçta resmi göster */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.instagram-link {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-top: 40px;
+}
+
+/* Yukarı Çık Butonu */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Sağ alt köşeden 20 piksel yukarıda */
+    right: 20px; /* Sağdan 20 piksel içeride */
+    background-color: #007bff; /* Arkaplan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px 20px; /* Buton iç boşluğu */
+    border-radius: 5px; /* Köşe yuvarlama */
+    cursor: pointer; /* El işareti farenin üstüne geldiğinde */
+    display: none; /* Başlangıçta gizli */
+}
+
+/* Yukarı Çık Butonu - Hover */
+.scroll-to-top:hover {
+    background-color: #0056b3; /* Hover durumunda arkaplan rengi */
+}
+
