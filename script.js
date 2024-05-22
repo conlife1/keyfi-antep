@@ -75,5 +75,22 @@ var translations = {
         welcomeMessage: "ЭТОТ САЙТ СПЕЦИАЛЬНО ПОДГОТОВЛЕН ДЛЯ БЕГЮМ СЕЙХАН..",
         loveMessage: "Я люблю тебя, моя дорогая..",
         aboutTitle: "О нас",
-        aboutText:
+        aboutText: "Я знаю свою любовь уже 6 лет..."
+    },
+    ar: {
+        welcomeMessage: "تم إعداد هذا الموقع خصيصًا لـ BEGÜM SEYHAN..",
+        loveMessage: "أحبك يا عزيزتي..",
+        aboutTitle: "حول",
+        aboutText: "لقد عرفت حبي لمدة 6 سنوات..."
+    }
+    // Diğer diller buraya eklenebilir
+};
 
+function changeLanguage() {
+    var selectedLanguage = document.getElementById('languageSelect').value;
+    var translationElements = document.querySelectorAll('[data-translate]');
+    translationElements.forEach(function(element) {
+        var key = element.getAttribute('data-translate');
+        element.textContent = translations[selectedLanguage][key];
+    });
+}
