@@ -11,15 +11,30 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkında</a></li>
-                <li><a href="#special"></a> <a href="begum2.html"> Begüm Hanıma Özel </a>
-                </li> 
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkında</a></li>
+            <li><a href="begum2.html">Begüm Hanıma Özel</a></li>
+            <li class="language-select">
+                <select id="languageSelect" onchange="changeLanguage()">
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="ru">Русский</option>
+                    <option value="ar">العربية</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="zh">中文</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+</header>
+
     
     <section id="home">
         <div class="container">
