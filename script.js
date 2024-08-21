@@ -44,25 +44,31 @@ function changeLanguage(lang) {
 // Belirtilen tarih ve saat (Türkiye saat dilimi)
 const targetDate = new Date("2025-05-13T00:00:00+03:00").getTime(); // +03:00 Türkiye'nin saat dilimi
 
-// Geri sayımı başlat
+// script.js
+
 function updateCountdown() {
+    const countdownDate = new Date('2025-05-13T00:00:00').getTime();
     const now = new Date().getTime();
-    const timeDifference = targetDate - now;
-    
-    if (timeDifference <= 0) {
-        document.getElementById('countdown').innerText = "Zaman doldu!";
-        clearInterval(countdownInterval);
-        return;
+    const distance = countdownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById('countdown').innerHTML = "Süre doldu";
     }
-    
-    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-    
-    document.getElementById('countdown').innerText = 
-        `${days} Gün ${hours} Saat ${minutes} Dakika ${seconds} Saniye`;
 }
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
 // Güncellemeyi her saniye yap
 const countdownInterval = setInterval(updateCountdown, 1000);
