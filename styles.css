@@ -71,7 +71,24 @@ footer {
     transform: scale(1.1);
 }
 
+#countdown {
+    text-align: center;
+    margin: 20px;
+}
 
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#timer span {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    margin: 5px;
+    border-radius: 5px;
+}
 
 
 @media screen and (max-width: 768px) {
