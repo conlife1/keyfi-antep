@@ -40,3 +40,35 @@ function changeLanguage(lang) {
             break;
     }
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // Hedef tarih: 13 Mayıs 2025, 14:30:00
+    const targetDate = new Date(2025, 4, 13, 14, 30, 0); // Aylar 0'dan başladığı için Mayıs 4 olarak girilmeli
+    
+    function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = targetDate - now;
+
+        if (timeRemaining <= 0) {
+            document.getElementById('countdown').innerHTML = "Buluşma zamanı geldi!";
+            return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown').innerHTML = `
+            <span>${days} Gün</span>
+            <span>${hours} Saat</span>
+            <span>${minutes} Dakika</span>
+            <span>${seconds} Saniye</span>
+        `;
+    }
+
+    // Güncellemeleri her saniye yap
+    setInterval(updateCountdown, 1000);
+
+    // İlk güncellemeyi hemen yap
+    updateCountdown();
+});
