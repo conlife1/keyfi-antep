@@ -39,5 +39,33 @@ function changeLanguage(lang) {
             loveMessage.innerText = 'Seni Seviyorum Begüm';
             break;
     }
+    
+}
+// Belirtilen tarih ve saat (Türkiye saat dilimi)
+const targetDate = new Date("2025-05-13T00:00:00+03:00").getTime(); // +03:00 Türkiye'nin saat dilimi
+
+// Geri sayımı başlat
+function updateCountdown() {
+    const now = new Date().getTime();
+    const timeDifference = targetDate - now;
+    
+    if (timeDifference <= 0) {
+        document.getElementById('countdown').innerText = "Zaman doldu!";
+        clearInterval(countdownInterval);
+        return;
+    }
+    
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+    document.getElementById('countdown').innerText = 
+        `${days} Gün ${hours} Saat ${minutes} Dakika ${seconds} Saniye`;
 }
 
+// Güncellemeyi her saniye yap
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// İlk güncellemeyi hemen yap
+updateCountdown();
