@@ -40,6 +40,7 @@ function changeLanguage(lang) {
             break;
     }
 }
+
 // Belirtilen tarih ve saat
 const targetDate = new Date("2025-05-13T14:30:00");
 
@@ -68,11 +69,3 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 
 // İlk güncellemeyi hemen yap
 updateCountdown();
-    }
-
-    // Güncellemeleri her saniye yap
-    setInterval(updateCountdown, 1000);
-
-    // İlk güncellemeyi hemen yap
-    updateCountdown();
-});
