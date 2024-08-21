@@ -71,23 +71,29 @@ footer {
     transform: scale(1.1);
 }
 
-#countdown {
+/* styles.css */
+
+/* Geri Sayım Bölümü */
+#countdown-section {
     text-align: center;
-    margin: 20px;
+    margin: 20px 0;
+}
+
+#countdown h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 #timer {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
-#timer span {
-    display: inline-block;
-    padding: 10px;
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
-    margin: 5px;
+#countdown span {
+    margin: 0 5px;
+    padding: 5px;
     border-radius: 5px;
+    background-color: #f3f3f3;
 }
 
 
