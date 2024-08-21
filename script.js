@@ -40,30 +40,34 @@ function changeLanguage(lang) {
             break;
     }
 }
-document.addEventListener('DOMContentLoaded', function() {
-    // Hedef tarih: 13 Mayıs 2025, 14:30:00
-    const targetDate = new Date(2025, 4, 13, 14, 30, 0); // Aylar 0'dan başladığı için Mayıs 4 olarak girilmeli
+// Belirtilen tarih ve saat
+const targetDate = new Date("2025-05-13T14:30:00");
+
+// Geri sayımı başlat
+function updateCountdown() {
+    const now = new Date();
+    const timeDifference = targetDate - now;
     
-    function updateCountdown() {
-        const now = new Date();
-        const timeRemaining = targetDate - now;
+    if (timeDifference <= 0) {
+        document.getElementById('countdown').innerText = "Zaman doldu!";
+        clearInterval(countdownInterval);
+        return;
+    }
+    
+    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+    
+    document.getElementById('countdown').innerText = 
+        `${days} Gün ${hours} Saat ${minutes} Dakika ${seconds} Saniye`;
+}
 
-        if (timeRemaining <= 0) {
-            document.getElementById('countdown').innerHTML = "Buluşma zamanı geldi!";
-            return;
-        }
+// Güncellemeyi her saniye yap
+const countdownInterval = setInterval(updateCountdown, 1000);
 
-        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-        document.getElementById('countdown').innerHTML = `
-            <span>${days} Gün</span>
-            <span>${hours} Saat</span>
-            <span>${minutes} Dakika</span>
-            <span>${seconds} Saniye</span>
-        `;
+// İlk güncellemeyi hemen yap
+updateCountdown();
     }
 
     // Güncellemeleri her saniye yap
