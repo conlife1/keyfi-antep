@@ -1,129 +1,41 @@
-/* Genel Stil */
+/* Arka plan rengi eski haline getirildi */
 body {
-    margin: 0;
+    background-color: #f5f5f5;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Eski arka plan rengi */
-}
-
-/* Navigasyon */
-nav {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Ana Başlık */
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 50px;
-}
-
-/* Bölüm Başlıkları */
-h2 {
-    text-align: center;
-    color: #444;
-    margin-top: 50px;
-}
-
-/* Container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Geri Sayım */
-#countdown {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 24px;
-}
-
-#timer {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-/* Resim Galerisi */
+/* Slayt gösterisi */
 .slideshow-container {
     position: relative;
     margin: auto;
-    max-width: 200px; /* Galeri genişliği 500px olarak sabitlendi */
+    max-width: 250px; /* Resim genişliği 250px olarak ayarlandı */
     overflow: hidden;
 }
 
-.mySlides {
-    display: none;
-    width: 100%; /* Resimlerin genişliği %100 olacak */
-    max-height: 100px; /* Orta boyut */
-    object-fit: cover; /* Aynı boyutta göster */
-    transition: opacity 1s ease;
+.mySlides img {
+    display: block;
+    width: 100%;
+    height: auto; /* Görsellerin yüksekliği otomatik ayarlandı */
+    max-width: 150px; /* Görsellerin genişliği maksimum 150px olacak */
+    margin: auto;
 }
 
-/* Instagram Bağlantıları */
-.instagram-link {
-    font-size: 20px;
+/* Instagram bağlantıları */
+.instagram-links {
     text-align: center;
-    display: block;
     margin-top: 20px;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+.instagram-links a {
+    display: block; /* Alt alta sıralandı */
+    font-size: 20px;
     color: #333;
     text-decoration: none;
+    margin: 5px 0;
 }
 
-.instagram-link:hover {
-    color: #007bff;
-}
-
-/* Yukarı Çık Butonu */
-.scroll-to-top {
-    position: fixed;
-    bottom: 60px; /* Yukarı Çık butonunun üzerinde */
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-}
-
-.scroll-to-top:hover {
-    background-color: #0056b3;
-}
-
-/* Mobile View */
-@media screen and (max-width: 600px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
+.instagram-links a:hover {
+    color: #007bff; /* Hover durumunda renk değişimi */
 }
