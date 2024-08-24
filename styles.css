@@ -1,97 +1,107 @@
-/* Genel Ayarlar */
+/* Genel Stil */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Eski arka plan rengi */
 }
 
-/* Header */
-header {
+/* Navigasyon */
+nav {
     background-color: #333;
-    color: #fff;
     padding: 10px 0;
-    text-align: center;
 }
 
-header nav ul {
-    list-style-type: none;
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Ana Bölümler */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-h1, h2 {
+/* Ana Başlık */
+h1 {
     text-align: center;
     color: #333;
+    margin-top: 50px;
 }
 
-/* Hakkında Bölümü */
-#about p {
-    line-height: 1.6;
-    text-align: justify;
+/* Bölüm Başlıkları */
+h2 {
+    text-align: center;
+    color: #444;
+    margin-top: 50px;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Geri Sayım */
-#countdown-section {
-    background-color: #eaeaea;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
 #countdown {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
     font-size: 24px;
-    font-weight: bold;
 }
 
-#countdown div {
-    margin: 0 10px;
+#timer {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 /* Resim Galerisi */
 .slideshow-container {
     position: relative;
-    max-width: 600px;
-    margin: 40px auto;
+    margin: auto;
+    max-width: 500px; /* Galeri genişliği 500px olarak sabitlendi */
     overflow: hidden;
-    border-radius: 10px;
 }
 
-.mySlides img {
-    width: 100%;
-    border-radius: 10px;
+.mySlides {
+    display: none;
+    width: 100%; /* Resimlerin genişliği %100 olacak */
+    max-height: 300px; /* Orta boyut */
+    object-fit: cover; /* Aynı boyutta göster */
+    transition: opacity 1s ease;
+}
+
+/* Instagram Bağlantıları */
+.instagram-link {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    color: #007bff;
 }
 
 /* Yukarı Çık Butonu */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 60px; /* Yukarı Çık butonunun üzerinde */
     right: 20px;
     background-color: #007bff;
     color: #fff;
@@ -99,23 +109,21 @@ h1, h2 {
     border-radius: 5px;
     cursor: pointer;
     display: none;
-    transition: background-color 0.3s;
 }
 
 .scroll-to-top:hover {
     background-color: #0056b3;
 }
 
-/* Instagram Linkleri */
-.instagram-link {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #007bff;
-    text-decoration: none;
-}
+/* Mobile View */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 
-.instagram-link:hover {
-    text-decoration: underline;
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
 }
