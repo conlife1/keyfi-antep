@@ -1,50 +1,71 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Begüm Hanım'a Özel Web Sitesi</title>
+    <title>Bebeğim İçin Özel Web Sitesi</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Resim Slaytı -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="resimler.jpg" alt="Resim 1">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="begum2.html">Begüm Hanıma Özel</a></li>
+                <li><a href="begum3.html">TIKLAYINIZ!!!!!</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <div class="container">
+            <h1>BU SİTE BEGÜM SEYHAN İÇİN ÖZEL OLARAK HAZIRLANMIŞTIR..</h1>
+            <p>Begüm sevgilim.. Eğer bu yazıyı okuyorsan bilki hala birbirimizi unutamamışız demektir. Seni hala çok seviyorum sensiz geçen her gün bana zehir gibi geliyor birtanem, Seni çok seviyorum gel tekrar barışalım çünkü ben sensiz yapamıyorum. Eğer bu yazıyı okuyorsan beni ara. Çünkü yapıcağımız daha çok şey var sevgilim.. Seni çok seviyorum ilk aşkım..</p>
         </div>
-        <div class="mySlides fade">
-            <img src="romantik1.jpg" alt="Resim 2">
-        </div>
-        <div class="mySlides fade">
-            <img src="romantik2.jpg" alt="Resim 3">
-        </div>
-        <div class="mySlides fade">
-            <img src="romantik3.jpg" alt="Resim 4">
-        </div>
-    </div>
+    </section>
 
-    <!-- Instagram Bağlantıları -->
-    <div class="instagram-links">
-        <a href="https://www.instagram.com/buraksyhn277/" target="_blank">BURAK SEYHAN</a>
-        <a href="https://www.instagram.com/begummavsar_/" target="_blank">BEGÜM SEYHAN</a>
-    </div>
+    <section id="about">
+        <div class="container">
+            <h2>Hakkında</h2>
+            <p>Sevgilimle 6 yıldır tanışıyoruz. Bir çok ayrılık yaşadık tekrar barıştık bu döngüyle büyüdük aslında biz fakat son 1.5 senedir hep birlikteyiz ait olduğumuz yer evimizdeyiz. Biz birbirine çok aşık iki insanız Begüm benim için çok şey ifade ediyor, o benim hayatımın merkezi, o benim hayatım. Seni çok seviyorum aşkım...</p>
+        </div>
+    </section>
 
-    <script>
-        var slideIndex = 0;
-        showSlides();
+    <section id="countdown">
+        <div class="container">
+            <h2>13 Mayıs'a Kalan Süre</h2>
+            <div id="timer">
+                <span id="days">00</span> Gün 
+                <span id="hours">00</span> Saat 
+                <span id="minutes">00</span> Dakika 
+                <span id="seconds">00</span> Saniye
+            </div>
+        </div>
+    </section>
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            setTimeout(showSlides, 3000); // Her 3 saniyede bir resmi değiştir
-        }
-    </script>
+    <section id="gallery">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="resimler.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="romantik1.jpg.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="romantik2.jpg.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="romantik3.jpg.jpg" style="width:100%">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <a href="https://www.instagram.com/buraksyhn277/" target="_blank" class="instagram-link">BURAK SEYHAN</a><br>
+        <a href="https://www.instagram.com/begummavsar_/" target="_blank" class="instagram-link">BEGÜM SEYHAN</a>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
 </html>
     <!DOCTYPE html>
