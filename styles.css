@@ -68,14 +68,14 @@ h2 {
 .slideshow-container {
     position: relative;
     margin: auto;
-    max-width: 500px; /* Galeri genişliği 500px olarak sabitlendi */
+    max-width: 200px; /* Galeri genişliği 500px olarak sabitlendi */
     overflow: hidden;
 }
 
 .mySlides {
     display: none;
     width: 100%; /* Resimlerin genişliği %100 olacak */
-    max-height: 300px; /* Orta boyut */
+    max-height: 100px; /* Orta boyut */
     object-fit: cover; /* Aynı boyutta göster */
     transition: opacity 1s ease;
 }
