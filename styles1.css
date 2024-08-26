@@ -1,71 +1,165 @@
-/* Genel Stil */
 body {
-    font-size: 16px;
-    text-align: center;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
-/* Başlık ve İçerik */
-h1, h2 {
-    margin-top: 20px;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    width: 80%;
     margin: 0 auto;
 }
 
-/* Yukarı Çık Butonu */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.scroll-to-top:hover {
-    background-color: #0056b3;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
 }
 
-/* Diğer Stiller */
-.spotify-link {
-    display: inline-block;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: #0070f3;
-    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery a {
+    text-decoration: none;
+    color: #333;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
     border-radius: 5px;
-    font-size: 20px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-.spotify-link:hover {
-    background-color: #0055cb;
+.gallery img:hover {
+    transform: scale(1.1);
+}
+body {
+    background-color: #ff0655; /* Pembe tonu */
+    color: rgb(0, 0, 0); /* Metin rengi */
+}
+body {
+    background-color: #ff95df; /* Pembe tonu */
+    color: rgb(0, 0, 0); /* Metin rengi */
 }
 
-.wish-text {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
-    font-size: 26px;
-    color: #333333;
+.container img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
-
-.romantic-message {
-    font-size: 18px;
+/* Dil Seçme Butonları */
+.language-buttons {
+    text-align: center;
     margin-bottom: 20px;
+}
+
+.language-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* "Seni Seviyorum Begüm" Yazısı */
+.love-message {
+    text-align: center;
+    font-size: 18px;
+    color: red; /* Romantik bir renk seçilebilir */
+}
+.date-time {
+    position: fixed;
+    top: 19px;
+    right: 19px;
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 768px) {
+    /* Mobil cihazlar için stil ayarlamaları */
+}
+
+@media screen and (max-width: 480px) {
+    /* Daha küçük mobil cihazlar için stil ayarlamaları */
 }
