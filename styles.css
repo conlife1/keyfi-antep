@@ -1,101 +1,74 @@
 body {
-    background-color: #FF69B4; /* Daha koyu bir pembe */
     font-family: Arial, sans-serif;
+    background-color: #ffb6c1; /* Daha koyu pembe */
+    color: #333;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 header nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
 }
 
 header nav ul li {
-    float: left;
+    display: inline;
+    margin: 0 15px;
 }
 
 header nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
     text-decoration: none;
-    font-size: 18px; /* Bağlantı boyutunu büyüttük */
+    color: #4b0082; /* Mor renk */
+    font-size: 1.2em; /* Bir tık daha büyük */
 }
 
-header nav ul li a:hover {
-    background-color: #111;
-}
-
-.container h1 {
-    color: #333;
-    margin-top: 20px;
-}
-
-.container p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.6;
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #about p {
-    font-size: 14px; /* Daha küçük boyut */
-    font-weight: bold; /* Kalın yazı */
-    text-align: center; /* Ortalanmış yazı */
-    color: #000000; /* Beyaz yazı rengi (isteğe bağlı) */
+    font-size: 1em; /* Yazı boyutu az küçültüldü */
+    font-weight: bold; /* Kalın hale getirildi */
+    text-align: center;
 }
 
-#countdown {
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    max-width: 400px;
+#countdown h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #timer {
     font-size: 2em;
-    color: #4e3b81; /* Geri sayım için modern bir mor renk */
+    margin-top: 20px;
 }
 
 .slideshow-container {
     position: relative;
-    margin: auto;
+    margin: 20px auto;
     max-width: 300px;
     overflow: hidden;
 }
 
-.mySlides img {
+.mySlides {
+    display: none;
     width: 100%;
-    height: auto;
+    transition: opacity 1s ease;
 }
 
-.instagram-link {
+.instagram-links {
+    margin-top: 50px;
+}
+
+.instagram-links a {
     display: block;
     font-size: 20px;
-    margin: 20px 0;
-    color: #4e3b81;
+    color: #4b0082; /* Mor renk */
     text-decoration: none;
+    margin: 10px 0;
 }
 
-.instagram-link:hover {
+.instagram-links a:hover {
     text-decoration: underline;
-}
-
-button {
-    background-color: #4e3b81; /* Mor renk butonlar */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #3b2a67;
 }
