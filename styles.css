@@ -1,5 +1,5 @@
 body {
-    background-color: #f5b6c7; /* Pembe arka plan rengi */
+    background-color: #FF69B4; /* Daha koyu bir pembe */
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -43,9 +43,10 @@ header nav ul li a:hover {
 }
 
 #about p {
-    font-size: 16px;
-    text-align: center;
-    font-weight: bold; /* Yazıların kalın olması */
+    font-size: 14px; /* Daha küçük boyut */
+    font-weight: bold; /* Kalın yazı */
+    text-align: center; /* Ortalanmış yazı */
+    color: #000000; /* Beyaz yazı rengi (isteğe bağlı) */
 }
 
 #countdown {
