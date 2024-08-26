@@ -93,3 +93,34 @@ header nav ul li a:hover {
 .instagram-links a:hover {
     text-decoration: underline;
 }
+/* Üst Menü için Mobil Düzenleme */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 10px 0; /* Bağlantılar arasında boşluk */
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Butonların boyutlarını ve stillerini mobilde uygun hale getirme */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li a {
+        font-size: 18px; /* Font boyutu mobilde biraz daha büyük */
+        padding: 15px 25px;
+    }
+}
