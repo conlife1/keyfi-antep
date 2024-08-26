@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffb6c1; /* Daha koyu pembe */
-    color: #333;
+    background-color: #e75480; /* Daha koyu pembe */
+    color: #000000; /* Siyah yazılar */
     text-align: center;
 }
 
@@ -19,6 +19,15 @@ header nav ul li a {
     text-decoration: none;
     color: #4b0082; /* Mor renk */
     font-size: 1.2em; /* Bir tık daha büyük */
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #dcdcdc;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #4b0082;
+    color: #fff;
 }
 
 #about h2 {
@@ -28,7 +37,7 @@ header nav ul li a {
 }
 
 #about p {
-    font-size: 1em; /* Yazı boyutu az küçültüldü */
+    font-size: 0.9em; /* Bir tık daha küçüldü */
     font-weight: bold; /* Kalın hale getirildi */
     text-align: center;
 }
@@ -40,8 +49,20 @@ header nav ul li a {
 }
 
 #timer {
-    font-size: 2em;
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
+}
+
+.time-box {
+    font-size: 2em;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4b0082;
+    color: white;
+    min-width: 80px;
+    text-align: center;
 }
 
 .slideshow-container {
