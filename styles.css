@@ -113,6 +113,22 @@ nav ul li a {
     text-align: center;
 }
 
+.location-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #8e44ad; /* Modern mor renk */
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.location-button:hover {
+  background-color: #732d91; /* Hover için daha koyu mor renk */
+}
+
 /* Butonların boyutlarını ve stillerini mobilde uygun hale getirme */
 @media (max-width: 768px) {
     nav ul {
