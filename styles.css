@@ -1,79 +1,100 @@
 body {
-    background-color: #ffc0cb; /* Pembe arka plan rengi */
+    background-color: #f5b6c7; /* Pembe arka plan rengi */
     font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Diğer CSS kodları */
-
 header nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: #333;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    float: left;
 }
 
 header nav ul li a {
+    display: block;
     color: white;
+    text-align: center;
+    padding: 16px;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px; /* Bağlantı boyutunu büyüttük */
 }
 
-section {
-    padding: 20px;
-    text-align: center;
+header nav ul li a:hover {
+    background-color: #111;
+}
+
+.container h1 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.container p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 #about p {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
     text-align: center;
-    margin: 20px auto;
-    max-width: 800px;
+    font-weight: bold; /* Yazıların kalın olması */
+}
+
+#countdown {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+#timer {
+    font-size: 2em;
+    color: #4e3b81; /* Geri sayım için modern bir mor renk */
 }
 
 .slideshow-container {
     position: relative;
-    margin: 20px auto;
-    max-width: 250px; 
-    overflow: hidden; 
+    margin: auto;
+    max-width: 300px;
+    overflow: hidden;
 }
 
 .mySlides img {
     width: 100%;
-    max-width: 150px;
     height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-#countdown {
-    margin: 20px auto;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.instagram-links {
-    margin-top: 20px;
-    text-align: center;
 }
 
 .instagram-link {
     display: block;
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 20px;
+    margin: 20px 0;
+    color: #4e3b81;
     text-decoration: none;
-    color: #007bff;
 }
 
 .instagram-link:hover {
     text-decoration: underline;
+}
+
+button {
+    background-color: #4e3b81; /* Mor renk butonlar */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #3b2a67;
 }
