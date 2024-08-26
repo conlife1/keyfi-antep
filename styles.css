@@ -1,9 +1,11 @@
 body {
-    background-color: #FFCBDB; /* Eski pembe arka plan rengi */
+    background-color: #ffc0cb; /* Pembe arka plan rengi */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
+/* Diğer CSS kodları */
 
 header nav ul {
     list-style: none;
