@@ -1,32 +1,20 @@
-/* Genel ayarlar */
 body {
+    background-color: #ffe6f2; /* Eski pembe arka plan rengi */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffccff; /* Pembe arka plan rengi */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Header ve Navigation */
-header {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
 }
 
 header nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    background-color: #333;
+    margin: 0;
 }
 
 header nav ul li {
+    display: inline;
     margin-right: 20px;
 }
 
@@ -36,80 +24,54 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Bölüm ayarları */
 section {
     padding: 20px;
     text-align: center;
-    flex-grow: 1;
-}
-
-#home h1 {
-    font-size: 2em;
-    color: #990099; /* Başlık rengi */
 }
 
 #about p {
-    font-size: 1.1em;
-    line-height: 1.6em;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-/* Geri Sayım Bölümü */
-#countdown h2 {
-    font-size: 2em;
-    color: #990099;
-    margin-bottom: 20px;
-}
-
-#timer {
-    font-size: 1.5em;
-    color: #333;
-}
-
-/* Resim Galerisi */
 .slideshow-container {
     position: relative;
-    margin: auto;
-    max-width: 250px; /* Resim genişliği 250px olarak sabitlendi */
-    overflow: hidden; /* Taşan resimleri gizler */
+    margin: 20px auto;
+    max-width: 250px; 
+    overflow: hidden; 
 }
 
-.mySlides {
-    display: none;
-    width: 100%; /* Resimlerin genişliği %100 olacak */
-}
-
-.fade {
-    opacity: 1; /* Başlangıçta resmi göster */
-}
-
-/* Instagram Bağlantıları */
-.instagram-link {
-    font-size: 20px;
-    text-align: center;
+.mySlides img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
     display: block;
-    margin: 10px 0; /* Bağlantılar arasında boşluk */
-    color: #007bff; /* Mavi renk */
+    margin: 0 auto;
+}
+
+#countdown {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.instagram-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.instagram-link {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
     text-decoration: none;
+    color: #007bff;
 }
 
 .instagram-link:hover {
-    text-decoration: underline; /* Üzerine gelindiğinde altını çiz */
-}
-
-/* Yukarı Çık Butonu */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px; /* Sağ alt köşeden 20 piksel yukarıda */
-    right: 20px; /* Sağdan 20 piksel içeride */
-    background-color: #007bff; /* Arkaplan rengi */
-    color: #fff; /* Yazı rengi */
-    padding: 10px 20px; /* Buton iç boşluğu */
-    border-radius: 5px; /* Köşe yuvarlama */
-    cursor: pointer; /* El işareti farenin üstüne geldiğinde */
-    display: none; /* Başlangıçta gizli */
-}
-
-/* Yukarı Çık Butonu - Hover */
-.scroll-to-top:hover {
-    background-color: #0056b3; /* Hover durumunda arkaplan rengi */
+    text-decoration: underline;
 }
