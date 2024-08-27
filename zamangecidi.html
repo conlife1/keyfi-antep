@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anı Geçidi</title>
+    <link rel="stylesheet" href="zaman.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anı Geçidi</h1>
+        <div class="gallery">
+            <div class="item" onclick="showImage('01.jpg')">
+                <img src="01.jpg" alt="Fotoğraf 1">
+                <div class="caption">Bu fotoğraf [açıklama]</div>
+            </div>
+            <div class="item" onclick="showImage('02.jpg')">
+                <img src="02.jpg" alt="Fotoğraf 2">
+                <div class="caption">Bu fotoğraf [açıklama]</div>
+            </div>
+            <!-- Daha fazla fotoğraf ekleyin -->
+        </div>
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div id="modal-caption"></div>
+        </div>
+    </div>
+    <script src="styles24.js"></script>
+</body>
+</html>
