@@ -32,6 +32,7 @@ body {
     position: relative;
     width: 80%;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 .timeline::before {
@@ -46,24 +47,17 @@ body {
 }
 
 .timeline-item {
-    padding: 10px 20px;
     position: relative;
     width: 50%;
+    padding: 10px 20px;
 }
 
 .timeline-item img {
-    width: 100px; /* Fotoğraf genişliği */
-    height: 100px; /* Fotoğraf yüksekliği */
+    width: 80px; /* Küçük fotoğraf boyutu */
+    height: 80px;
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
-}
-
-.timeline-item .arrow {
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .timeline-item.left {
@@ -75,31 +69,28 @@ body {
     left: 50%;
 }
 
-.timeline-item.right .arrow {
-    right: 120px; /* Okun sağdan mesafesi */
-}
-
-.timeline-item.left .arrow {
-    left: 120px; /* Okun soldan mesafesi */
-}
-
-/* Modern Ok Stili */
-.timeline::before {
-    background-color: transparent;
-    border-left: 4px solid #333;
-}
-
-.timeline::after {
-    content: '';
+.arrow-left, .arrow-right {
     position: absolute;
-    left: 50%;
+    font-size: 24px;
     top: 50%;
-    margin-left: -10px;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-left-color: #333;
-    transform: rotate(45deg);
+    transform: translateY(-50%);
+    color: #333;
+}
+
+.arrow-left {
+    left: calc(100% + 10px); /* Fotoğraftan 10px uzaklıkta */
+}
+
+.arrow-right {
+    right: calc(100% + 10px); /* Fotoğraftan 10px uzaklıkta */
+}
+
+.timeline-item.left .arrow-left {
+    left: calc(100% + 10px);
+}
+
+.timeline-item.right .arrow-right {
+    right: calc(100% + 10px);
 }
 
 /* Modal CSS */
