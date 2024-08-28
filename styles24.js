@@ -12,32 +12,34 @@ function closeModal() {
     var modal = document.getElementById("modal");
     modal.style.display = "none";
 }
-// Modal elementleri
-var modal = document.getElementById("photo-modal");
-var img = document.getElementById("modal-img");
-var description = document.getElementById("modal-description");
-var span = document.getElementsByClassName("close")[0];
+}
+// JavaScript for handling modal image view
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('modal');
+    var modalImg = document.getElementById('modal-img');
+    var modalCaption = document.getElementById('modal-caption');
+    var modalClose = document.getElementById('modal-close');
 
-// Fotoğrafa tıklandığında modal'ı aç
-document.querySelectorAll('.photo-link').forEach(item => {
-    item.addEventListener('click', event => {
-        event.preventDefault();
-        var photoSrc = item.getAttribute('data-photo');
-        var photoDesc = item.getAttribute('data-description');
-        img.src = photoSrc;
-        description.textContent = photoDesc;
-        modal.style.display = "block";
+    // Get all images with class "expandable"
+    var images = document.querySelectorAll('img.expandable');
+
+    images.forEach(function(img) {
+        img.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalImg.src = this.src;
+            modalCaption.innerHTML = this.nextElementSibling.innerHTML; // Get caption from next <p> element
+        });
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    modalClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
     });
 });
-
-// Kapatma butonuna tıklandığında modal'ı kapat
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Modal dışına tıklandığında modal'ı kapat
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
