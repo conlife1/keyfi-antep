@@ -10,6 +10,10 @@ header {
     padding: 20px;
 }
 
+nav {
+    margin-bottom: 20px;
+}
+
 nav a {
     margin: 0 15px;
     text-decoration: none;
@@ -17,17 +21,23 @@ nav a {
     font-weight: bold;
 }
 
+.description p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 .photo-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     margin: 20px;
 }
 
 .photo {
     position: relative;
-    margin: 20px;
+    margin: 10px;
 }
 
 .photo img {
@@ -44,6 +54,43 @@ nav a {
     font-weight: bold;
     font-size: 0.8rem;
     margin-top: 5px;
+}
+
+/* Medya sorguları */
+@media (max-width: 768px) {
+    .photo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        margin: 10px 0;
+    }
+
+    .photo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .description p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .photo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .photo p {
+        font-size: 0.7rem;
+    }
 }
 
 footer {
