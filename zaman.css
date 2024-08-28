@@ -64,24 +64,21 @@ body {
 
 /* Fotoğraf Öğeleri */
 .timeline-item {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: calc(50% - 40px); /* Fotoğraflar için genişlik */
     padding: 20px 0;
     display: flex;
     align-items: center;
-    margin-bottom: 40px; /* Fotoğraflar arasına boşluk */
 }
 
-/* Sol ve sağ fotoğraflar arasına mesafe eklemek için */
+/* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
-    position: absolute;
-    left: calc(50% - 90px); /* Çubuğun soluna hizalanacak ve mesafe eklenmiş */
+    left: calc(50% - 70px); /* Çubuğun soluna hizalanacak ve mesafe eklenmiş */
     text-align: right;
 }
 
 .timeline-item.right {
-    position: absolute;
-    left: calc(50% + 30px); /* Çubuğun sağına hizalanacak ve mesafe eklenmiş */
+    left: calc(50% + 10px); /* Çubuğun sağına hizalanacak ve mesafe eklenmiş */
     text-align: left;
 }
 
