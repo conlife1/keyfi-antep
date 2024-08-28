@@ -100,11 +100,17 @@ body {
 
 /* Fotoğraflar Çizgiye Yakın ve Çapraz */
 .timeline-item.left img {
-    transform: translateX(-50%) translateY(-50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+    position: relative;
+    top: -10px; /* Çizgiye yakınlaştırma */
+    left: -30px; /* Çizgiye yakınlaştırma */
+    transform: translateY(-50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item.right img {
-    transform: translateX(50%) translateY(50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+    position: relative;
+    top: -10px; /* Çizgiye yakınlaştırma */
+    left: 30px; /* Çizgiye yakınlaştırma */
+    transform: translateY(50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item img:hover {
