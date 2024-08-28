@@ -52,7 +52,7 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    width: 6px; /* Çubuğun genişliği arttırıldı */
+    width: 6px; /* Çubuğun genişliği */
     background-color: #d4a373; /* Açık altın renk çizgi */
     top: 0;
     bottom: 0;
@@ -65,11 +65,24 @@ body {
 /* Fotoğraf Öğeleri */
 .timeline-item {
     position: relative;
-    width: 50%;
+    width: 100%;
     padding: 20px 0;
     display: flex;
     align-items: center;
     margin-bottom: 40px; /* Fotoğraflar arasına boşluk */
+}
+
+/* Sol ve sağ fotoğraflar arasına mesafe eklemek için */
+.timeline-item.left {
+    position: absolute;
+    left: calc(50% - 80px); /* Çubuğun soluna hizalanacak */
+    text-align: right;
+}
+
+.timeline-item.right {
+    position: absolute;
+    left: calc(50% + 20px); /* Çubuğun sağına hizalanacak */
+    text-align: left;
 }
 
 .timeline-item img {
@@ -86,20 +99,6 @@ body {
 .timeline-item img:hover {
     transform: scale(1.1); /* Fotoğraf üzerine gelince büyüme efekti */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.timeline-item.left {
-    position: relative;
-    left: -25%; /* Sol fotoğrafların konumunu ayarlamak için */
-    text-align: right;
-    justify-content: flex-end;
-}
-
-.timeline-item.right {
-    position: relative;
-    left: 25%; /* Sağ fotoğrafların konumunu ayarlamak için */
-    text-align: left;
-    justify-content: flex-start;
 }
 
 /* Ok İşaretleri */
