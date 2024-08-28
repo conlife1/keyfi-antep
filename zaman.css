@@ -84,8 +84,8 @@ body {
 
 /* Fotoğraf stili */
 .timeline-item img {
-    width: 100px; /* Küçük fotoğraf boyutu */
-    height: 100px;
+    width: 75px; /* Küçük fotoğraf boyutu */
+    height: 75px;
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
@@ -120,7 +120,7 @@ body {
     }
 
     .timeline-item img {
-        width: 50px; /* Mobilde fotoğraf boyutunu küçültme */
-        height: 50px;
+        width: 70px; /* Mobilde fotoğraf boyutunu küçültme */
+        height: 700px;
     }
 }
