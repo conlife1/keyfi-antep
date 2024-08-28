@@ -29,8 +29,8 @@ body {
 }
 
 .timeline-item img {
-    width: 200px; /* Fotoğraf genişliği */
-    height: 200px; /* Fotoğraf yüksekliği */
+    width: 75px; /* Fotoğraf genişliği */
+    height: 75px; /* Fotoğraf yüksekliği */
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
