@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fafafa; /* Arka plan rengini hafif gri yaptım */
     margin: 0;
     padding: 0;
 }
@@ -8,6 +8,8 @@ body {
 header {
     text-align: center;
     padding: 20px;
+    background-color: #333; /* Koyu renkli başlık arka planı */
+    color: #fff;
 }
 
 nav {
@@ -17,36 +19,34 @@ nav {
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #fff; /* Bağlantı rengi beyaz */
     font-weight: bold;
 }
 
-.description p {
-    margin: 0;
-    font-size: 1rem;
+.description {
+    margin: 20px 0;
+    color: #333;
 }
 
 .photo-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    margin: 20px;
+    align-items: center;
+    position: relative;
 }
 
 .photo {
-    position: relative;
+    position: absolute;
     margin: 10px;
 }
 
 .photo img {
-    width: 100px;
+    width: 100px; /* Fotoğraf boyutu */
     height: 100px;
     object-fit: cover;
-    border: 2px solid #333;
+    border: 2px solid #000; /* Çerçeve rengi siyah */
     border-radius: 5px;
-    transform: rotate(-15deg);
 }
 
 .photo p {
@@ -54,13 +54,32 @@ nav a {
     font-weight: bold;
     font-size: 0.8rem;
     margin-top: 5px;
+    color: #000; /* Açıklama metni rengi siyah */
+}
+
+/* Çubuk tasarımı */
+.photo-container::before, .photo-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #000; /* Çubuğun rengi siyah */
+    z-index: -1;
+}
+
+.photo-container::before {
+    left: 0;
+}
+
+.photo-container::after {
+    right: 0;
 }
 
 /* Medya sorguları */
 @media (max-width: 768px) {
     .photo-container {
         flex-direction: column;
-        align-items: center;
     }
 
     .photo {
@@ -96,6 +115,6 @@ nav a {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #333; /* Koyu renkli footer arka planı */
     color: #fff;
 }
