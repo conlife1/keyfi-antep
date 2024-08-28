@@ -84,8 +84,8 @@ body {
 
 /* Fotoğraf stili */
 .timeline-item img {
-    width: 70px; /* Küçük fotoğraf boyutu */
-    height: 70px;
+    width: 100px; /* Küçük fotoğraf boyutu */
+    height: 100px;
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
@@ -106,8 +106,11 @@ body {
 /* Açıklama Cümlesi */
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
-    color: #d4a373; /* Açık altın renk açıklama cümlesi */
+    color: #f4e2d8; /* Açık pembe-bej renk açıklama cümlesi */
     font-size: 14px; /* Mobil uyumluluk için yazı boyutu küçültüldü */
+    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
+    padding: 5px 10px;
+    border-radius: 5px; /* Arka plan köşelerini yuvarlama */
 }
 
 /* Mobil Uyumluluk */
@@ -119,4 +122,5 @@ body {
     .timeline-item img {
         width: 50px; /* Mobilde fotoğraf boyutunu küçültme */
         height: 50px;
-   
+    }
+}
