@@ -75,13 +75,13 @@ body {
 /* Sol ve sağ fotoğraflar arasına mesafe eklemek için */
 .timeline-item.left {
     position: absolute;
-    left: calc(50% - 80px); /* Çubuğun soluna hizalanacak */
+    left: calc(50% - 90px); /* Çubuğun soluna hizalanacak ve mesafe eklenmiş */
     text-align: right;
 }
 
 .timeline-item.right {
     position: absolute;
-    left: calc(50% + 20px); /* Çubuğun sağına hizalanacak */
+    left: calc(50% + 30px); /* Çubuğun sağına hizalanacak ve mesafe eklenmiş */
     text-align: left;
 }
 
