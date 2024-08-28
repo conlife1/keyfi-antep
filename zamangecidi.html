@@ -7,41 +7,31 @@
     <link rel="stylesheet" href="zaman.css">
 </head>
 <body>
-    <!-- Sayfa Bağlantıları -->
-    <nav class="page-links">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="about.html">Hakkında</a>
-        <a href="contact.html">İletişim</a>
-    </nav>
-
-    <!-- Açıklama Cümlesi -->
-    <div class="description">
-        <p>1. Madde</p>
-        <p>2. Madde</p>
-        <p>3. Madde</p>
-        <p>4. Madde</p>
-        <p>5. Madde</p>
-    </div>
-
-    <!-- Fotoğraf Galerisi -->
-    <div class="timeline">
-        <div class="timeline-item left">
-            <img src="01.jpg" alt="Fotoğraf 1" onclick="showImage('01.jpg', 'Bu fotoğraf ile ilgili açıklama')">
-            <div class="arrow-left">&#8592;</div>
+    <header>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="begum.html">Begüm Hanıma Özel</a>
+            <a href="tıklayınız.html">Tıklayınız</a>
+        </nav>
+        <div class="description">
+            <p>hepiniz hos geldiniz burası anı gecidi.</p>
         </div>
-        <div class="timeline-item right">
-            <img src="02.jpg" alt="Fotoğraf 2" onclick="showImage('02.jpg', 'Bu fotoğraf ile ilgili açıklama')">
-            <div class="arrow-right">&#8594;</div>
+    </header>
+    <main>
+        <div class="photo-container">
+            <div class="photo">
+                <img src="20.jpeg" alt="Fotoğraf 1">
+                <p>(merhabalar efendim)</p>
+            </div>
+            <div class="photo">
+                <img src="19.jpeg" alt="Fotoğraf 2">
+                <p>(bugün cok güzeldi)</p>
+            </div>
+            <!-- Diğer fotoğraflar buraya eklenecek -->
         </div>
-        <!-- Diğer fotoğraflar buraya eklenir -->
-    </div>
-
-    <div id="modal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modal-img">
-        <div id="modal-caption"></div>
-    </div>
-
-    <script src="styles24.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2024 Web Sitesi</p>
+    </footer>
 </body>
 </html>
