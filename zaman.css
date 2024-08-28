@@ -64,26 +64,27 @@ body {
 
 /* Fotoğraf Öğeleri */
 .timeline-item {
-    position: absolute;
-    width: calc(50% - 40px); /* Fotoğraf öğesinin genişliği */
+    position: relative;
+    width: calc(50% - 60px); /* Fotoğraf öğesinin genişliği */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0; /* Padding kaldırıldı */
+    padding: 0;
+    margin-bottom: 40px; /* Fotoğraflar arasında boşluk */
 }
 
 /* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
     left: 0; /* Çubuğun soluna hizalanacak */
     text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
-    top: calc(20px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
+    top: calc(20px + 80px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
 }
 
 .timeline-item.right {
     left: 50%; /* Çubuğun sağında hizalanacak */
     transform: translateX(50%); /* Çubuğun sağından hizalamak için */
     text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
-    top: calc(20px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
+    top: calc(20px + 80px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
 }
 
 /* Çizgiye Yakın Fotoğraflar */
@@ -102,15 +103,15 @@ body {
 .timeline-item.left img {
     position: relative;
     top: -10px; /* Çizgiye yakınlaştırma */
-    left: -30px; /* Çizgiye yakınlaştırma */
-    transform: translateY(-50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+    left: -20px; /* Çizgiye yakınlaştırma */
+    transform: translateY(-30px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item.right img {
     position: relative;
     top: -10px; /* Çizgiye yakınlaştırma */
-    left: 30px; /* Çizgiye yakınlaştırma */
-    transform: translateY(50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+    left: 20px; /* Çizgiye yakınlaştırma */
+    transform: translateY(30px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item img:hover {
