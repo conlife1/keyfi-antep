@@ -52,12 +52,12 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 6px; /* Çubuğun genişliği arttırıldı */
     background-color: #d4a373; /* Açık altın renk çizgi */
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -2px;
+    margin-left: -3px; /* Çubuğun merkezde düzgün görünmesi için margin ayarı */
     height: 10000px; /* Uzun çizgi */
     box-shadow: 0 0 15px #8c6a5c; /* Koyu kahverengi gölge */
 }
@@ -69,7 +69,7 @@ body {
     padding: 20px 0;
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Fotoğraflar arasına boşluk */
+    margin-bottom: 40px; /* Fotoğraflar arasına boşluk */
 }
 
 .timeline-item img {
@@ -90,14 +90,14 @@ body {
 
 .timeline-item.left {
     position: relative;
-    left: 0;
+    left: -25%; /* Sol fotoğrafların konumunu ayarlamak için */
     text-align: right;
     justify-content: flex-end;
 }
 
 .timeline-item.right {
     position: relative;
-    left: 50%;
+    left: 25%; /* Sağ fotoğrafların konumunu ayarlamak için */
     text-align: left;
     justify-content: flex-start;
 }
