@@ -1,172 +1,98 @@
+/* Genel Sayfa Stilleri */
 body {
-    font-family: 'Times New Roman', serif;
-    background-color: #2e2d2c; /* Koyu gri arka plan */
-    color: #f4e2d8; /* Açık pembe-bej metin rengi */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-/* Sayfa Bağlantıları */
-.page-links {
-    text-align: center;
-    margin: 20px 0;
-    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
-    padding: 10px 0;
+    background-color: #2e2d2c;
+    color: #f4e2d8;
+    font-family: Arial, sans-serif;
 }
 
 .page-links a {
-    margin: 0 15px;
+    color: #f4e2d8;
     text-decoration: none;
-    color: #f4e2d8; /* Açık pembe-bej bağlantı rengi */
-    font-weight: bold;
-    font-size: 18px;
+    padding: 10px;
 }
 
 .page-links a:hover {
-    text-decoration: underline;
-    color: #d4a373; /* Açık altın renk hover efekti */
+    color: #d4a373;
 }
 
-/* Açıklama Cümlesi */
+/* Açıklama Stilleri */
 .description {
     text-align: center;
-    margin-bottom: 40px;
-    color: #d4a373; /* Açık altın renk açıklama cümlesi */
     font-size: 24px;
-    font-weight: bold;
+    margin: 20px 0;
 }
 
-/* Timeline Yapısı */
+/* Timeline Stilleri */
 .timeline {
     position: relative;
-    width: 90%; /* Genişlik ayarı mobil uyumluluk için artırıldı */
+    padding: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
 }
 
-/* Çubuk Tasarımı */
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 6px; /* Çubuğun genişliği */
-    background-color: #d4a373; /* Açık altın renk çizgi */
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px; /* Çubuğun merkezde düzgün görünmesi için margin ayarı */
-    height: 10000px; /* Uzun çizgi */
-    box-shadow: 0 0 15px #8c6a5c; /* Koyu kahverengi gölge */
-}
-
-/* Fotoğraf Öğeleri */
+/* Timeline Item Stilleri */
 .timeline-item {
     position: relative;
-    width: 100%;
-    margin-bottom: 40px; /* Fotoğraflar arasında boşluk */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-/* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 40px; /* Çizgiye yakınlaştırma */
+    float: left;
+    clear: both;
 }
 
 .timeline-item.right {
-    display: flex;
-    justify-content: flex-start;
-    margin-right: 40px; /* Çizgiye yakınlaştırma */
+    float: right;
+    clear: both;
 }
 
-/* Fotoğraf stili */
-.timeline-item img {
-    width: 75px; /* Küçük fotoğraf boyutu */
-    height: 75px;
-    border-radius: 8px;
+/* Fotoğraf Stilleri */
+img.expandable {
+    width: 100%;
+    max-width: 300px;
     cursor: pointer;
-    object-fit: cover;
-    border: 2px solid #000; /* Fotoğraf çerçeve rengi siyah */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #d4a373;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Fotoğraflar Çizgiye Yakın */
-.timeline-item.left img {
-    margin-right: 20px; /* Sol fotoğrafların sağ tarafındaki boşluk */
-}
-
-.timeline-item.right img {
-    margin-left: 20px; /* Sağ fotoğrafların sol tarafındaki boşluk */
-}
-
-/* Açıklama Cümlesi */
-.timeline-item p {
-    margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
-    color: #f4e2d8; /* Açık pembe-bej renk açıklama cümlesi */
-    font-size: 14px; /* Mobil uyumluluk için yazı boyutu küçültüldü */
-    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
-    padding: 5px 10px;
-    border-radius: 5px; /* Arka plan köşelerini yuvarlama */
-}
-/* Modal (Açılır Pencere) */
+/* Modal Stilleri */
 .modal {
-    display: none; /* Varsayılan olarak görünmez */
+    display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.8); /* Koyu gölge arka plan */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal İçeriği */
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%; /* Görüntüleme alanı genişliği */
-    max-width: 700px; /* Maksimum genişlik */
-    border: 2px solid #f4e2d8; /* Açık pembe-bej sınır rengi */
+    max-width: 80%;
+    max-height: 80%;
 }
 
-/* Modal Açıklama */
-.modal-description {
+.modal-caption {
+    margin: 10px;
     text-align: center;
-    color: #f4e2d8; /* Açık pembe-bej renk açıklama */
-    font-size: 16px;
-    padding: 10px;
-    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
-    border-top: 2px solid #d4a373; /* Açık altın renk sınır */
+    color: #f4e2d8;
 }
 
-/* Kapatma Butonu */
-.close {
-    color: #f4e2d8; /* Açık pembe-bej renk */
-    float: right;
-    font-size: 28px;
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f4e2d8;
+    font-size: 40px;
     font-weight: bold;
-    padding: 10px;
     cursor: pointer;
 }
 
-/* Kapatma Butonunun Üzerine Gelinince Renk Değişimi */
-.close:hover {
-    color: #d4a373; /* Açık altın renk */
-}
-
-/* Mobil Uyumluluk */
-@media (max-width: 768px) {
-    .timeline {
-        width: 95%; /* Mobil cihazlarda daha geniş alan kullanımı */
-    }
-
-    .timeline-item img {
-        width: 70px; /* Mobilde fotoğraf boyutunu küçültme */
-        height: 70px;
-    }
+.modal-close:hover {
+    color: #d4a373;
 }
