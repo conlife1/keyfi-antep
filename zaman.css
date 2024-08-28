@@ -1,131 +1,54 @@
 body {
-    font-family: 'Times New Roman', serif;
-    background-color: #2e2d2c;
-    color: #f4e2d8;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-/* Sayfa Bağlantıları */
-.page-links {
+header {
     text-align: center;
-    margin: 20px 0;
-    background-color: #8c6a5c;
-    padding: 10px 0;
+    padding: 20px;
 }
 
-.page-links a {
+nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #f4e2d8;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.page-links a:hover {
-    text-decoration: underline;
-    color: #d4a373;
-}
-
-/* Açıklama Cümlesi */
-.description {
-    text-align: center;
-    margin-bottom: 40px;
-    color: #d4a373;
-    font-size: 24px;
+    color: #333;
     font-weight: bold;
 }
 
-/* Timeline Yapısı */
-.timeline {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
+.photo-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #d4a373;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-    height: 10000px; /* Uzun çizgi */
-    box-shadow: 0 0 15px #8c6a5c;
-}
-
-/* Fotoğraf Öğeleri */
-.timeline-item {
+.photo {
     position: relative;
-    width: 50%;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
+    margin: 20px;
 }
 
-.timeline-item img {
-    width: 70px; /* Küçük fotoğraf boyutu */
-    height: 70px;
-    border-radius: 8px;
-    cursor: pointer;
+.photo img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transform: rotate(-15deg);
 }
 
-.timeline-item img:hover {
-    transform: scale(1.1); /* Fotoğraf üzerine gelince büyüme efekti */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+.photo p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 5px;
 }
 
-.timeline-item.left {
-    left: 0;
-    text-align: right;
-    justify-content: flex-end;
-}
-
-.timeline-item.right {
-    left: 50%;
-    justify-content: flex-start;
-}
-
-/* Ok İşaretleri */
-.arrow-left, .arrow-right {
-    font-size: 24px;
-    color: #d4a373;
-    margin: 0 10px;
-}
-
-.timeline-item.left .arrow-left {
-    order: 2; /* Ok işaretini sağa taşır */
-}
-
-.timeline-item.right .arrow-right {
-    order: 1; /* Ok işaretini sola taşır */
-}button {
-    background-color: #8c6a5c;
-    color: #f4e2d8;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-    background-color: #d4a373;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-    background-color: #8c6a5c;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
 }
