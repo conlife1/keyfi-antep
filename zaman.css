@@ -1,120 +1,112 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fafafa; /* Arka plan rengini hafif gri yaptım */
+    font-family: 'Times New Roman', serif;
+    background-color: #2e2d2c; /* Koyu gri arka plan */
+    color: #f4e2d8; /* Açık pembe-bej metin rengi */
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-header {
+/* Sayfa Bağlantıları */
+.page-links {
     text-align: center;
-    padding: 20px;
-    background-color: #333; /* Koyu renkli başlık arka planı */
-    color: #fff;
+    margin: 20px 0;
+    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
+    padding: 10px 0;
 }
 
-nav {
-    margin-bottom: 20px;
-}
-
-nav a {
+.page-links a {
     margin: 0 15px;
     text-decoration: none;
-    color: #fff; /* Bağlantı rengi beyaz */
+    color: #f4e2d8; /* Açık pembe-bej bağlantı rengi */
     font-weight: bold;
+    font-size: 18px;
 }
 
+.page-links a:hover {
+    text-decoration: underline;
+    color: #d4a373; /* Açık altın renk hover efekti */
+}
+
+/* Açıklama Cümlesi */
 .description {
-    margin: 20px 0;
-    color: #333;
-}
-
-.photo-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.photo {
-    position: absolute;
-    margin: 10px;
-}
-
-.photo img {
-    width: 100px; /* Fotoğraf boyutu */
-    height: 100px;
-    object-fit: cover;
-    border: 2px solid #000; /* Çerçeve rengi siyah */
-    border-radius: 5px;
-}
-
-.photo p {
     text-align: center;
+    margin-bottom: 40px;
+    color: #d4a373; /* Açık altın renk açıklama cümlesi */
+    font-size: 24px;
     font-weight: bold;
-    font-size: 0.8rem;
-    margin-top: 5px;
-    color: #000; /* Açıklama metni rengi siyah */
 }
 
-/* Çubuk tasarımı */
-.photo-container::before, .photo-container::after {
+/* Timeline Yapısı */
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline::before {
     content: '';
     position: absolute;
-    top: 50%;
-    width: 100%;
-    height: 2px;
-    background: #000; /* Çubuğun rengi siyah */
-    z-index: -1;
+    width: 4px;
+    background-color: #d4a373; /* Açık altın renk çizgi */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    height: 10000px; /* Uzun çizgi */
+    box-shadow: 0 0 15px #8c6a5c; /* Koyu kahverengi gölge */
 }
 
-.photo-container::before {
+/* Fotoğraf Öğeleri */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item img {
+    width: 70px; /* Küçük fotoğraf boyutu */
+    height: 70px;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item img:hover {
+    transform: scale(1.1); /* Fotoğraf üzerine gelince büyüme efekti */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-item.left {
     left: 0;
+    text-align: right;
+    justify-content: flex-end;
 }
 
-.photo-container::after {
-    right: 0;
+.timeline-item.right {
+    left: 50%;
+    justify-content: flex-start;
 }
 
-/* Medya sorguları */
-@media (max-width: 768px) {
-    .photo-container {
-        flex-direction: column;
-    }
-
-    .photo {
-        margin: 10px 0;
-    }
-
-    .photo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .description p {
-        font-size: 0.9rem;
-    }
+/* Ok İşaretleri */
+.arrow-left, .arrow-right {
+    font-size: 24px;
+    color: #d4a373; /* Açık altın renk ok işaretleri */
+    margin: 0 10px;
 }
 
-@media (max-width: 480px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .photo img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .photo p {
-        font-size: 0.7rem;
-    }
+.timeline-item.left .arrow-left {
+    order: 2; /* Ok işaretini sağa taşır */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333; /* Koyu renkli footer arka planı */
-    color: #fff;
+.timeline-item.right .arrow-right {
+    order: 1; /* Ok işaretini sola taşır */
 }
