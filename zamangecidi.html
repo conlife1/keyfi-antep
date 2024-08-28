@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anı Geçidi</title>
     <link rel="stylesheet" href="zaman.css">
-    <script src="styles24.js" defer></script>
 </head>
 <body>
     <div class="page-links">
         <a href="index.html">Ana Sayfa</a>
-        <a href="begum2.html">Begüm Hanıma Özel</a>
-        <a href="begum3.html">Tıklayınız</a>
         <a href="zamangecidi.html">Anı Geçidi</a>
+        <!-- Diğer sayfa bağlantıları buraya eklenebilir -->
     </div>
 
-    <div class="description">Anı Geçidi</div>
+    <div class="description">
+        <p>Burada, geçmişten izler taşıyan anılara göz atabilirsiniz.</p>
+    </div>
 
     <div class="timeline">
-        <!-- Sol ve Sağ Fotoğraflar -->
         <div class="timeline-item left">
             <img src="01.jpg" alt="Fotoğraf 1" class="expandable">
             <p>Fotoğraf 1 Açıklaması</p>
@@ -201,11 +200,13 @@
         </div>
     </div>
 
-    <!-- Büyütülen Fotoğrafın Gösterileceği Alan -->
-    <div id="modal" class="modal">
-        <span id="modal-close" class="modal-close">&times;</span>
-        <img id="modal-img" class="modal-content" src="" alt="">
-        <div id="modal-caption" class="modal-caption"></div>
+    <!-- Modal için HTML -->
+    <div id="myModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption" class="modal-caption"></div>
     </div>
+
+    <script src="styles24.js"></script>
 </body>
 </html>
