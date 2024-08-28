@@ -1,45 +1,33 @@
-function showImage(imgSrc, captionText) {
-    var modal = document.getElementById("modal");
-    var modalImg = document.getElementById("modal-img");
-    var caption = document.getElementById("modal-caption");
-    
-    modal.style.display = "block";
-    modalImg.src = imgSrc;
-    caption.textContent = captionText;
-}
-
-function closeModal() {
-    var modal = document.getElementById("modal");
-    modal.style.display = "none";
-}
-}
-// JavaScript for handling modal image view
 document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.getElementById('modal');
-    var modalImg = document.getElementById('modal-img');
-    var modalCaption = document.getElementById('modal-caption');
-    var modalClose = document.getElementById('modal-close');
+    // Tüm fotoğrafları seç
+    const photos = document.querySelectorAll('.timeline-item img');
 
-    // Get all images with class "expandable"
-    var images = document.querySelectorAll('img.expandable');
+    // Her bir fotoğraf için tıklama olayını ayarla
+    photos.forEach(photo => {
+        photo.addEventListener('click', function() {
+            // Mevcut boyutu kontrol et
+            const isExpanded = this.classList.contains('expanded');
 
-    images.forEach(function(img) {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            modalCaption.innerHTML = this.nextElementSibling.innerHTML; // Get caption from next <p> element
+            // Diğer tüm fotoğrafları küçült
+            photos.forEach(p => p.classList.remove('expanded'));
+
+            // Eğer tıklanan fotoğraf zaten büyükse, küçült
+            if (isExpanded) {
+                this.classList.remove('expanded');
+            } else {
+                // Tıklanan fotoğrafı büyüt
+                this.classList.add('expanded');
+            }
         });
     });
-
-    // When the user clicks on <span> (x), close the modal
-    modalClose.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
 });
+
+// CSS ile genişletme stilini tanımlayın
+const style = document.createElement('style');
+style.innerHTML = `
+    .timeline-item img.expanded {
+        transform: scale(1.5); /* Fotoğrafı %150 büyüt */
+        z-index: 10; /* Fotoğrafın diğer öğelerin üstünde görünmesini sağla */
+    }
+`;
+document.head.appendChild(style);
