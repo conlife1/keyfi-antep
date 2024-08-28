@@ -33,6 +33,9 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timeline::before {
@@ -44,17 +47,20 @@ body {
     bottom: 0;
     left: 50%;
     margin-left: -2px;
+    height: 10000px; /* 130 fotoğrafın sığması için uzun çizgi */
 }
 
 .timeline-item {
     position: relative;
     width: 50%;
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
 }
 
 .timeline-item img {
-    width: 80px; /* Küçük fotoğraf boyutu */
-    height: 80px;
+    width: 50px; /* Küçük fotoğraf boyutu */
+    height: 50px;
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
@@ -63,34 +69,26 @@ body {
 .timeline-item.left {
     left: 0;
     text-align: right;
+    justify-content: flex-end;
 }
 
 .timeline-item.right {
     left: 50%;
+    justify-content: flex-start;
 }
 
 .arrow-left, .arrow-right {
-    position: absolute;
-    font-size: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: 20px;
     color: #333;
-}
-
-.arrow-left {
-    left: calc(100% + 10px); /* Fotoğraftan 10px uzaklıkta */
-}
-
-.arrow-right {
-    right: calc(100% + 10px); /* Fotoğraftan 10px uzaklıkta */
+    margin: 0 10px;
 }
 
 .timeline-item.left .arrow-left {
-    left: calc(100% + 10px);
+    order: 2; /* Ok işaretini sağa taşır */
 }
 
 .timeline-item.right .arrow-right {
-    right: calc(100% + 10px);
+    order: 1; /* Ok işaretini sola taşır */
 }
 
 /* Modal CSS */
