@@ -7,18 +7,34 @@
     <link rel="stylesheet" href="zaman.css">
 </head>
 <body>
+    <!-- Sayfa Bağlantıları -->
+    <nav class="page-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkında</a>
+        <a href="contact.html">İletişim</a>
+        <!-- Diğer sayfa bağlantıları eklenebilir -->
+    </nav>
+
+    <!-- Açıklama Cümlesi -->
+    <div class="description">
+        <p>1. Madde</p>
+        <p>2. Madde</p>
+        <p>3. Madde</p>
+        <p>4. Madde</p>
+        <p>5. Madde</p>
+    </div>
+
+    <!-- Fotoğraf Galerisi -->
     <div class="timeline">
-    <div class="timeline-item left">
-        <img src="01.jpg" alt="Fotoğraf 1" onclick="showImage('01.jpg', 'Bu fotoğraf ile ilgili açıklama')">
-        <div class="arrow">&#8594;</div>
-    </div>
-    <div class="timeline-item right">
-        <img src="02.jpg" alt="Fotoğraf 2" onclick="showImage('02.jpg', 'Bu fotoğraf ile ilgili açıklama')">
-        <div class="arrow">&#8592;</div>
-    </div>
-    <!-- Daha fazla öğe ekleyin -->
-</div>
-        <!-- Daha fazla öğe ekleyin -->
+        <div class="timeline-item left">
+            <img src="01.jpg" alt="Fotoğraf 1" onclick="showImage('01.jpg', 'Bu fotoğraf ile ilgili açıklama')">
+            <div class="arrow">&#8594;</div>
+        </div>
+        <div class="timeline-item right">
+            <img src="02.jpg" alt="Fotoğraf 2" onclick="showImage('02.jpg', 'Bu fotoğraf ile ilgili açıklama')">
+            <div class="arrow">&#8592;</div>
+        </div>
+        <!-- Diğer fotoğraflar eklenir -->
     </div>
 
     <div id="modal" class="modal">
