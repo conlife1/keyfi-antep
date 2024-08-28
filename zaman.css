@@ -67,20 +67,23 @@ body {
     position: absolute;
     width: calc(50% - 60px); /* Fotoğraf öğesinin genişliği */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0; /* Fotoğraf öğesinin paddingi küçültüldü */
 }
 
 /* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
     left: 0; /* Çubuğun soluna hizalanacak */
-    text-align: right;
+    text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
+    top: calc(10px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
 }
 
 .timeline-item.right {
     left: 50%; /* Çubuğun sağında hizalanacak */
     transform: translateX(50%); /* Çubuğun sağından hizalamak için */
-    text-align: left;
+    text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
+    top: calc(10px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
 }
 
 .timeline-item img {
@@ -99,17 +102,27 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+/* Açıklama Cümlesi */
+.timeline-item p {
+    margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
+    color: #d4a373; /* Açık altın renk açıklama cümlesi */
+    font-size: 16px;
+}
+
 /* Ok İşaretleri */
 .arrow-left, .arrow-right {
+    position: absolute;
     font-size: 24px;
     color: #d4a373; /* Açık altın renk ok işaretleri */
-    margin: 0 10px;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.timeline-item.left .arrow-left {
-    order: 2; /* Sol ok işaretini sağa taşır */
+.arrow-left {
+    left: -30px; /* Çubuğun solundaki ok işareti */
 }
 
-.timeline-item.right .arrow-right {
-    order: 1; /* Sağ ok işaretini sola taşır */
+.arrow-right {
+    right: -30px; /* Çubuğun sağındaki ok işareti */
 }
