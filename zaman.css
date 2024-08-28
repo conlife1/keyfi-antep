@@ -5,39 +5,62 @@ body {
     padding: 0;
 }
 
+/* Sayfa Bağlantıları */
+.page-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.page-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.page-links a:hover {
+    text-decoration: underline;
+}
+
+/* Açıklama Cümlesi */
+.description {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Timeline Yapısı */
 .timeline {
     position: relative;
     width: 80%;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 4px;
     background-color: #333;
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    margin-left: -2px;
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 10px 20px;
     position: relative;
     width: 50%;
 }
 
 .timeline-item img {
-    width: 75px; /* Fotoğraf genişliği */
-    height: 75px; /* Fotoğraf yüksekliği */
+    width: 100px; /* Fotoğraf genişliği */
+    height: 100px; /* Fotoğraf yüksekliği */
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
 }
 
 .timeline-item .arrow {
-    font-size: 24px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -53,17 +76,17 @@ body {
 }
 
 .timeline-item.right .arrow {
-    right: 220px; /* Okun sağdan mesafesi */
+    right: 120px; /* Okun sağdan mesafesi */
 }
 
 .timeline-item.left .arrow {
-    left: 220px; /* Okun soldan mesafesi */
+    left: 120px; /* Okun soldan mesafesi */
 }
 
 /* Modern Ok Stili */
 .timeline::before {
     background-color: transparent;
-    border-left: 6px solid #333;
+    border-left: 4px solid #333;
 }
 
 .timeline::after {
@@ -71,10 +94,10 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -15px;
+    margin-left: -10px;
     width: 0;
     height: 0;
-    border: 15px solid transparent;
+    border: 10px solid transparent;
     border-left-color: #333;
     transform: rotate(45deg);
 }
