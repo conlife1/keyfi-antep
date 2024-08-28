@@ -25,12 +25,24 @@ body {
 /* Timeline Stilleri */
 .timeline {
     position: relative;
-    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
-/* Timeline Item Stilleri */
+/* Timeline Çizgi Stilleri */
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: #d4a373;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
 .timeline-item {
     position: relative;
     width: 50%;
@@ -41,11 +53,18 @@ body {
 .timeline-item.left {
     float: left;
     clear: both;
+    text-align: right;
 }
 
 .timeline-item.right {
     float: right;
     clear: both;
+    text-align: left;
+}
+
+.timeline-item p {
+    margin: 5px 0;
+    color: #d4a373;
 }
 
 /* Fotoğraf Stilleri */
@@ -55,6 +74,7 @@ img.expandable {
     cursor: pointer;
     border: 2px solid #d4a373;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
 }
 
 /* Modal Stilleri */
