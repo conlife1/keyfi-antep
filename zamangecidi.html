@@ -7,25 +7,24 @@
     <link rel="stylesheet" href="zaman.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Anı Geçidi</h1>
-        <div class="gallery">
-            <div class="item" onclick="showImage('01.jpg')">
-                <img src="01.jpg" alt="Fotoğraf 1">
-                <div class="caption">Bu fotoğraf [açıklama]</div>
-            </div>
-            <div class="item" onclick="showImage('02.jpg')">
-                <img src="02.jpg" alt="Fotoğraf 2">
-                <div class="caption">Bu fotoğraf [açıklama]</div>
-            </div>
-            <!-- Daha fazla fotoğraf ekleyin -->
+    <div class="timeline">
+        <div class="timeline-item left">
+            <img src="01.jpg" alt="Fotoğraf 1">
+            <div class="arrow">&#8594;</div>
         </div>
-        <div id="modal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modal-img">
-            <div id="modal-caption"></div>
+        <div class="timeline-item right">
+            <img src="02.jpg" alt="Fotoğraf 2">
+            <div class="arrow">&#8592;</div>
         </div>
+        <!-- Daha fazla öğe ekleyin -->
     </div>
+
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+
     <script src="styles24.js"></script>
 </body>
 </html>
