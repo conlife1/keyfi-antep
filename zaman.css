@@ -29,10 +29,11 @@ body {
 }
 
 .timeline-item img {
-    width: 100%;
-    height: auto;
+    width: 200px; /* Fotoğraf genişliği */
+    height: 200px; /* Fotoğraf yüksekliği */
     border-radius: 8px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .timeline-item .arrow {
@@ -52,13 +53,33 @@ body {
 }
 
 .timeline-item.right .arrow {
-    right: 10px;
+    right: 220px; /* Okun sağdan mesafesi */
 }
 
 .timeline-item.left .arrow {
-    left: 10px;
+    left: 220px; /* Okun soldan mesafesi */
 }
 
+/* Modern Ok Stili */
+.timeline::before {
+    background-color: transparent;
+    border-left: 6px solid #333;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: #333;
+    transform: rotate(45deg);
+}
+
+/* Modal CSS */
 .modal {
     display: none;
     position: fixed;
