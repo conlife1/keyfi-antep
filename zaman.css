@@ -40,7 +40,7 @@ body {
 /* Timeline Yapısı */
 .timeline {
     position: relative;
-    width: 80%;
+    width: 90%; /* Genişlik ayarı mobil uyumluluk için artırıldı */
     margin: 0 auto;
     padding: 20px 0;
     display: flex;
@@ -65,7 +65,7 @@ body {
 /* Fotoğraf Öğeleri */
 .timeline-item {
     position: relative;
-    width: calc(50% - 60px); /* Fotoğraf öğesinin genişliği */
+    width: calc(100% - 20px); /* Fotoğraf öğesinin genişliği mobil uyumlu hale getirildi */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,23 +74,26 @@ body {
 }
 
 /* Sol ve sağ fotoğraflar için hizalama */
-.timeline-item.left {
-    left: 0; /* Çubuğun soluna hizalanacak */
-    text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
-    top: calc(20px + 80px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
+.timeline-item.left, .timeline-item.right {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px; /* Fotoğraflar arasında boşluk */
 }
 
+/* Sol fotoğraflar */
+.timeline-item.left {
+    text-align: center;
+}
+
+/* Sağ fotoğraflar */
 .timeline-item.right {
-    left: 50%; /* Çubuğun sağında hizalanacak */
-    transform: translateX(50%); /* Çubuğun sağından hizalamak için */
-    text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
-    top: calc(20px + 80px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
+    text-align: center;
 }
 
 /* Çizgiye Yakın Fotoğraflar */
 .timeline-item img {
-    width: 70px; /* Küçük fotoğraf boyutu */
-    height: 70px;
+    width: 60px; /* Küçük fotoğraf boyutu */
+    height: 60px;
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
@@ -103,15 +106,15 @@ body {
 .timeline-item.left img {
     position: relative;
     top: -10px; /* Çizgiye yakınlaştırma */
-    left: -20px; /* Çizgiye yakınlaştırma */
-    transform: translateY(-30px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+    left: -10px; /* Çizgiye yakınlaştırma */
+    transform: translateY(-20px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item.right img {
     position: relative;
     top: -10px; /* Çizgiye yakınlaştırma */
-    left: 20px; /* Çizgiye yakınlaştırma */
-    transform: translateY(30px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+    right: -10px; /* Çizgiye yakınlaştırma */
+    transform: translateY(20px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item img:hover {
@@ -123,10 +126,21 @@ body {
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
     color: #d4a373; /* Açık altın renk açıklama cümlesi */
-    font-size: 16px;
+    font-size: 14px; /* Mobil uyumluluk için yazı boyutu küçültüldü */
 }
 
-/* Ok İşaretleri - Geçici Olarak Kaldırıldı */
-.arrow-left, .arrow-right {
-    display: none; /* Ok işaretlerini geçici olarak kaldırdık */
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .timeline {
+        width: 95%; /* Mobil cihazlarda daha geniş alan kullanımı */
+    }
+
+    .timeline-item img {
+        width: 50px; /* Mobilde fotoğraf boyutunu küçültme */
+        height: 50px;
+    }
+
+    .description {
+        font-size: 18px; /* Açıklama yazı boyutunu mobil için küçültme */
+    }
 }
