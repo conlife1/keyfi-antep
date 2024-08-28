@@ -48,6 +48,7 @@ body {
     align-items: center;
 }
 
+/* Çubuk Tasarımı */
 .timeline::before {
     content: '';
     position: absolute;
@@ -68,6 +69,7 @@ body {
     padding: 20px 0;
     display: flex;
     align-items: center;
+    margin-bottom: 20px; /* Fotoğraflar arasına boşluk */
 }
 
 .timeline-item img {
@@ -76,6 +78,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
+    border: 2px solid #000; /* Fotoğraf çerçeve rengi siyah */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -86,13 +89,16 @@ body {
 }
 
 .timeline-item.left {
+    position: relative;
     left: 0;
     text-align: right;
     justify-content: flex-end;
 }
 
 .timeline-item.right {
+    position: relative;
     left: 50%;
+    text-align: left;
     justify-content: flex-start;
 }
 
@@ -104,9 +110,9 @@ body {
 }
 
 .timeline-item.left .arrow-left {
-    order: 2; /* Ok işaretini sağa taşır */
+    order: 2; /* Sol ok işaretini sağa taşır */
 }
 
 .timeline-item.right .arrow-right {
-    order: 1; /* Ok işaretini sola taşır */
+    order: 1; /* Sağ ok işaretini sola taşır */
 }
