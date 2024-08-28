@@ -65,27 +65,28 @@ body {
 /* Fotoğraf Öğeleri */
 .timeline-item {
     position: absolute;
-    width: calc(50% - 60px); /* Fotoğraf öğesinin genişliği */
+    width: calc(50% - 40px); /* Fotoğraf öğesinin genişliği */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0; /* Fotoğraf öğesinin paddingi küçültüldü */
+    padding: 0; /* Padding kaldırıldı */
 }
 
 /* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
     left: 0; /* Çubuğun soluna hizalanacak */
     text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
-    top: calc(10px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
+    top: calc(20px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
 }
 
 .timeline-item.right {
     left: 50%; /* Çubuğun sağında hizalanacak */
     transform: translateX(50%); /* Çubuğun sağından hizalamak için */
     text-align: center; /* Fotoğrafların altında açıklama ortalanacak */
-    top: calc(10px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
+    top: calc(20px + 70px * var(--item-index)); /* Fotoğrafların yüksekliği ve aralığı ayarlandı */
 }
 
+/* Çizgiye Yakın Fotoğraflar */
 .timeline-item img {
     width: 70px; /* Küçük fotoğraf boyutu */
     height: 70px;
@@ -95,6 +96,15 @@ body {
     border: 2px solid #000; /* Fotoğraf çerçeve rengi siyah */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fotoğraflar Çizgiye Yakın ve Çapraz */
+.timeline-item.left img {
+    transform: translateX(-50%) translateY(-50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
+}
+
+.timeline-item.right img {
+    transform: translateX(50%) translateY(50%); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
 .timeline-item img:hover {
@@ -109,20 +119,7 @@ body {
     font-size: 16px;
 }
 
-/* Ok İşaretleri */
+/* Ok İşaretleri - Geçici Olarak Kaldırıldı */
 .arrow-left, .arrow-right {
-    position: absolute;
-    font-size: 24px;
-    color: #d4a373; /* Açık altın renk ok işaretleri */
-    margin: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.arrow-left {
-    left: -30px; /* Çubuğun solundaki ok işareti */
-}
-
-.arrow-right {
-    right: -30px; /* Çubuğun sağındaki ok işareti */
+    display: none; /* Ok işaretlerini geçici olarak kaldırdık */
 }
