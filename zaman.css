@@ -112,6 +112,52 @@ body {
     padding: 5px 10px;
     border-radius: 5px; /* Arka plan köşelerini yuvarlama */
 }
+/* Modal (Açılır Pencere) */
+.modal {
+    display: none; /* Varsayılan olarak görünmez */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8); /* Koyu gölge arka plan */
+}
+
+/* Modal İçeriği */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Görüntüleme alanı genişliği */
+    max-width: 700px; /* Maksimum genişlik */
+    border: 2px solid #f4e2d8; /* Açık pembe-bej sınır rengi */
+}
+
+/* Modal Açıklama */
+.modal-description {
+    text-align: center;
+    color: #f4e2d8; /* Açık pembe-bej renk açıklama */
+    font-size: 16px;
+    padding: 10px;
+    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
+    border-top: 2px solid #d4a373; /* Açık altın renk sınır */
+}
+
+/* Kapatma Butonu */
+.close {
+    color: #f4e2d8; /* Açık pembe-bej renk */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Kapatma Butonunun Üzerine Gelinince Renk Değişimi */
+.close:hover {
+    color: #d4a373; /* Açık altın renk */
+}
 
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
