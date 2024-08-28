@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+.page-links {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .page-links a {
     color: #f4e2d8;
     text-decoration: none;
@@ -27,6 +32,17 @@ body {
     position: relative;
     width: 80%;
     margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #d4a373;
+    transform: translateX(-50%);
 }
 
 .timeline-item {
