@@ -43,9 +43,6 @@ body {
     width: 90%; /* Genişlik ayarı mobil uyumluluk için artırıldı */
     margin: 0 auto;
     padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Çubuk Tasarımı */
@@ -65,40 +62,27 @@ body {
 /* Fotoğraf Öğeleri */
 .timeline-item {
     position: relative;
-    width: calc(100% - 20px); /* Fotoğraf öğesinin genişliği mobil uyumlu hale getirildi */
+    width: 100%;
+    margin-bottom: 60px; /* Fotoğraflar arasında boşluk */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    margin-bottom: 40px; /* Fotoğraflar arasında boşluk */
 }
 
 /* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
-    text-align: center;
-    position: absolute;
-    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
 }
 
 .timeline-item.right {
-    text-align: center;
-    position: absolute;
-    right: 0;
-}
-
-/* Sol fotoğraflar */
-.timeline-item.left img {
+    display: flex;
+    justify-content: flex-start;
     position: relative;
-    transform: translateX(-20px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
 }
 
-/* Sağ fotoğraflar */
-.timeline-item.right img {
-    position: relative;
-    transform: translateX(20px); /* Çizgiye yakınlaştırma ve çapraz hizalama */
-}
-
-/* Fotoğraflar */
+/* Fotoğraf stili */
 .timeline-item img {
     width: 70px; /* Küçük fotoğraf boyutu */
     height: 70px;
@@ -110,9 +94,13 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-item img:hover {
-    transform: scale(1.1); /* Fotoğraf üzerine gelince büyüme efekti */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+/* Fotoğraflar Çizgiye Yakın */
+.timeline-item.left img {
+    margin-left: 20px; /* Fotoğrafın soldaki boşluğu */
+}
+
+.timeline-item.right img {
+    margin-right: 20px; /* Fotoğrafın sağdaki boşluğu */
 }
 
 /* Açıklama Cümlesi */
