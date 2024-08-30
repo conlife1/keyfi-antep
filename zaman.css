@@ -74,7 +74,7 @@ body {
     text-align: center;
     margin-bottom: 40px;
     color: #d4a373; /* Açık altın renk açıklama cümlesi */
-    font-size: 24px;
+    font-size: 20px; /* Mobil uyumluluk için boyut küçültme */
     font-weight: bold;
 }
 
@@ -141,7 +141,7 @@ body {
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
     color: #d4a373; /* Açık altın renk açıklama cümlesi */
-    font-size: 16px; /* Mobil uyumluluk için yazı boyutu ayarı */
+    font-size: 14px; /* Mobil uyumluluk için yazı boyutu küçültme */
     text-align: center; /* Açıklamaların ortalanması için */
 }
 
@@ -157,7 +157,7 @@ body {
     }
 
     .description {
-        font-size: 20px; /* Mobilde açıklama yazı boyutunu küçültme */
+        font-size: 18px; /* Mobilde açıklama yazı boyutunu küçültme */
     }
 
     .rules-header {
