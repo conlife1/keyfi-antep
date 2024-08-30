@@ -46,7 +46,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Kurallar Bölümü */
 .rules-list {
     list-style-type: none;
     padding: 0;
@@ -145,8 +144,12 @@ body {
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
     color: #d4a373; /* Açık altın renk açıklama cümlesi */
-    font-size: 14px; /* Mobil uyumluluk için yazı boyutu küçültme */
-    text-align: center; /* Açıklamaların ortalanması için */
+    font-size: 14px; /* Yazı boyutu küçültme */
+    text-align: center; /* Açıklamaların ortalanması */
+    line-height: 1.4; /* Satır yüksekliği ayarlama */
+    word-wrap: break-word; /* Uzun kelimelerin satır içinde kalmasını sağlar */
+    overflow-wrap: break-word; /* Uzun metinleri taşmadan keser */
+    word-break: break-word; /* Taşmayı engeller, satır içinde bölme yapar */
 }
 
 /* Mobil Uyumluluk */
@@ -170,5 +173,9 @@ body {
 
     .rules-list li {
         font-size: 16px; /* Mobilde liste yazı boyutunu küçültme */
+    }
+
+    .timeline-item p {
+        font-size: 12px; /* Mobilde yazı boyutunu küçültme */
     }
 }
