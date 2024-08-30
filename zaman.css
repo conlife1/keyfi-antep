@@ -14,7 +14,42 @@ body {
     background-color: #8c6a5c; /* Koyu kahverengi arka plan */
     padding: 10px 0;
 }
+/* Kurallar Bölümü */
+.rules-section {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #8c6a5c; /* Koyu kahverengi arka plan */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
+.rules-header {
+    font-size: 24px;
+    color: #d4a373; /* Açık altın rengi */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.rules-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    color: #f4e2d8; /* Açık pembe-bej metin rengi */
+}
+
+.rules-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #2e2d2c; /* Koyu gri arka plan */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.rules-list li:hover {
+    background-color: #d4a373; /* Hover sırasında altın renk */
+    color: #2e2d2c; /* Koyu gri metin rengi */
+}
 .page-links a {
     margin: 0 15px;
     text-decoration: none;
