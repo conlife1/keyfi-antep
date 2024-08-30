@@ -46,11 +46,14 @@ body {
     margin-bottom: 15px;
 }
 
+/* Kurallar Bölümü */
 .rules-list {
     list-style-type: none;
     padding: 0;
-    font-size: 18px;
+    font-size: 16px; /* Yazı boyutu küçültüldü */
     color: #f4e2d8; /* Açık pembe-bej metin rengi */
+    word-wrap: break-word; /* Uzun kelimelerin satır içinde kalmasını sağlar */
+    overflow-wrap: break-word; /* Uzun metinleri taşmadan keser */
 }
 
 .rules-list li {
@@ -59,9 +62,7 @@ body {
     background-color: #2e2d2c; /* Koyu gri arka plan */
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    overflow: hidden; /* Taşmayı engellemek için */
-    text-overflow: ellipsis; /* Taşan metin için ellipsis ekleme */
-    white-space: nowrap; /* Metnin tek satırda kalmasını sağlama */
+    font-size: 14px; /* Mobilde daha iyi görünüm için boyut küçültüldü */
 }
 
 .rules-list li:hover {
