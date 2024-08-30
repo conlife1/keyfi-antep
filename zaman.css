@@ -100,20 +100,22 @@ body {
     width: 100%;
     margin-bottom: 40px; /* Fotoğraflar arasında boşluk */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* Açıklamaların fotoğrafın altında olması için kolon yönü */
+    align-items: center; /* Ortalamak için */
 }
 
 /* Sol ve sağ fotoğraflar için hizalama */
 .timeline-item.left {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column; /* Açıklama fotoğrafın altında olacak şekilde düzenle */
+    align-items: flex-end; /* Çizgiye yakınlaştırma */
     margin-left: 40px; /* Çizgiye yakınlaştırma */
 }
 
 .timeline-item.right {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column; /* Açıklama fotoğrafın altında olacak şekilde düzenle */
+    align-items: flex-start; /* Çizgiye yakınlaştırma */
     margin-right: 40px; /* Çizgiye yakınlaştırma */
 }
 
@@ -129,20 +131,12 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Fotoğraflar Çizgiye Yakın */
-.timeline-item.left img {
-    margin-right: 20px; /* Sol fotoğrafların sağ tarafındaki boşluk */
-}
-
-.timeline-item.right img {
-    margin-left: 20px; /* Sağ fotoğrafların sol tarafındaki boşluk */
-}
-
 /* Açıklama Cümlesi */
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
     color: #d4a373; /* Açık altın renk açıklama cümlesi */
     font-size: 14px; /* Mobil uyumluluk için yazı boyutu küçültüldü */
+    text-align: center; /* Açıklamaların ortalanması için */
 }
 
 /* Mobil Uyumluluk */
