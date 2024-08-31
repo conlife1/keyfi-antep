@@ -154,9 +154,11 @@ body {
 
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
-    .timeline {
-        width: 95%; /* Mobil cihazlarda daha geniş alan kullanımı */
+    .timeline-item p {
+        font-weight: bold; /* Yazıyı kalın yapma */
+        color: #b07d4f; /* Daha koyu bir altın renk */
     }
+}
 
     .timeline::before {
         left: 50%;
