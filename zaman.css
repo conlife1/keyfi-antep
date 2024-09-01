@@ -145,11 +145,10 @@ body {
 /* Açıklama Cümlesi */
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
-    color: #d4a373; /* Açık altın renk açıklama cümlesi */
+    color: #b07d4f; /* Biraz daha koyu altın renk açıklama cümlesi */
     font-size: 16px; /* Yazı boyutunu biraz artırma */
-    font-weight: bold; /* Yazıyı kalınlaştırma */
+    font-weight: 700; /* Yazıyı daha kalın yapma */
     text-align: center; /* Açıklamaların ortalanması için */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Yazıyı daha belirgin hale getirmek için gölge ekleme */
 }
 
 /* Mobil Uyumluluk */
