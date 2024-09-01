@@ -155,7 +155,8 @@ body {
 /* Mobil Uyumluluk */
 @media (max-width: 768px) {
     .timeline-item p {
-        font-weight: bold; /* Yazıyı kalın yapma */
+        font-weight: 700; /* Yazıyı daha kalın yapma */
+        font-size: 15px; /* Yazı boyutunu biraz büyütme */
         color: #b07d4f; /* Daha koyu bir altın renk */
     }
 }
