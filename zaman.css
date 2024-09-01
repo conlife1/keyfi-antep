@@ -146,8 +146,8 @@ body {
 .timeline-item p {
     margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
     color: #b07d4f; /* Biraz daha koyu altın renk açıklama cümlesi */
-    font-size: 16px; /* Yazı boyutunu biraz artırma */
-    font-weight: 700; /* Yazıyı daha kalın yapma */
+    font-size: 19px; /* Yazı boyutunu biraz artırma */
+    font-weight: 750; /* Yazıyı daha kalın yapma */
     text-align: center; /* Açıklamaların ortalanması için */
 }
 
