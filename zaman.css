@@ -1,6 +1,6 @@
-/* Genel stil */
+/* Genel Stil */
 body {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif; /* Modern bir font seçimi */
     background-color: #2e2d2c; /* Koyu gri arka plan */
     color: #f4e2d8; /* Açık pembe-bej metin rengi */
     margin: 0;
@@ -20,8 +20,9 @@ body {
     margin: 0 15px;
     text-decoration: none;
     color: #f4e2d8; /* Açık pembe-bej bağlantı rengi */
-    font-weight: bold;
+    font-weight: 600; /* Orta kalınlıkta yazı */
     font-size: 18px;
+    transition: color 0.3s ease; /* Renk değişimi için geçiş efekti */
 }
 
 .page-links a:hover {
@@ -42,18 +43,21 @@ body {
 .rules-header {
     font-size: 24px;
     color: #d4a373; /* Açık altın rengi */
-    font-weight: bold;
+    font-weight: 700; /* Kalın başlıklar */
     margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif; /* Başlıklar için modern bir font */
 }
 
 .rules-list {
     list-style-type: none;
     padding: 0;
-    font-size: 14px; /* Yazı boyutu daha da küçültüldü */
+    font-size: 14px; /* Yazı boyutu */
     color: #f4e2d8; /* Açık pembe-bej metin rengi */
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    margin: 0;
+    line-height: 1.6; /* Satır yüksekliği */
 }
 
 .rules-list li {
@@ -62,9 +66,8 @@ body {
     background-color: #2e2d2c; /* Koyu gri arka plan */
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 12px; /* Mobilde daha iyi görünüm için boyut küçültüldü */
+    font-size: 14px; /* Font boyutu */
     text-align: left; /* Metni sola hizalama */
-    line-height: 1.4; /* Satır yüksekliğini küçültme */
 }
 
 .rules-list li:hover {
@@ -77,8 +80,9 @@ body {
     text-align: center;
     margin-bottom: 40px;
     color: #d4a373; /* Açık altın renk açıklama cümlesi */
-    font-size: 20px; /* Mobil uyumluluk için boyut küçültme */
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700; /* Kalın yazı tipi */
+    font-family: 'Montserrat', sans-serif; /* Modern başlık fontu */
 }
 
 /* Timeline Yapısı */
@@ -127,7 +131,7 @@ body {
     text-align: left;
 }
 
-/* Fotoğraf stili */
+/* Fotoğraf Stili */
 .timeline-item img {
     width: 80px;
     height: 80px;
@@ -154,7 +158,7 @@ body {
     background-color: #2e2d2c; /* Çizginin altında metnin kaybolmaması için arka plan rengi eklendi */
 }
 
-/* Mobil uyumluluk */
+/* Mobil Uyumluluk */
 @media screen and (max-width: 768px) {
     .timeline-item p {
         font-size: 15px;
