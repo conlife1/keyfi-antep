@@ -46,15 +46,14 @@ body {
     margin-bottom: 15px;
 }
 
-/* Kurallar Bölümü */
 .rules-list {
     list-style-type: none;
     padding: 0;
     font-size: 14px; /* Yazı boyutu daha da küçültüldü */
     color: #f4e2d8; /* Açık pembe-bej metin rengi */
-    overflow-wrap: break-word; /* Uzun metinleri taşmadan keser */
-    word-wrap: break-word; /* Uzun kelimelerin satır içinde kalmasını sağlar */
-    word-break: break-word; /* Taşmayı engeller, satır içinde bölme yapar */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .rules-list li {
@@ -85,7 +84,7 @@ body {
 /* Timeline Yapısı */
 .timeline {
     position: relative;
-    width: 90%; /* Genişlik ayarı mobil uyumluluk için artırıldı */
+    width: 90%;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -94,102 +93,102 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    width: 4px; /* Çubuğun genişliği */
-    background-color: #d4a373; /* Açık altın renk çizgi */
+    width: 4px;
+    background-color: #d4a373; /* Çizginin rengi */
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -2px; /* Çubuğun merkezde düzgün görünmesi için margin ayarı */
-    height: 100%; /* Uzun çizgi */
-    box-shadow: 0 0 15px #8c6a5c; /* Koyu kahverengi gölge */
+    margin-left: -2px;
+    height: 100%;
+    box-shadow: 0 0 15px #8c6a5c;
+    z-index: 1; /* Çizgi için z-index */
 }
 
 /* Fotoğraf Öğeleri */
 .timeline-item {
     position: relative;
     width: 100%;
-    margin-bottom: 40px; /* Fotoğraflar arasında boşluk */
+    margin-bottom: 40px;
     display: flex;
-    flex-direction: column; /* Açıklamaların fotoğrafın altında olması için kolon yönü */
-    align-items: center; /* Ortalamak için */
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; /* Metin ve fotoğraf için z-index artırıldı */
 }
 
 .timeline-item.left {
-    align-items: flex-end; /* Çizgiye yakınlaştırma */
-    padding-right: 40px; /* Çizgiye yakınlaştırma */
-    text-align: right; /* Metni sağa hizalama */
+    align-items: flex-end;
+    padding-right: 40px;
+    text-align: right;
 }
 
 .timeline-item.right {
-    align-items: flex-start; /* Çizgiye yakınlaştırma */
-    padding-left: 40px; /* Çizgiye yakınlaştırma */
-    text-align: left; /* Metni sola hizalama */
+    align-items: flex-start;
+    padding-left: 40px;
+    text-align: left;
 }
 
 /* Fotoğraf stili */
 .timeline-item img {
-    width: 80px; /* Fotoğraf boyutu */
+    width: 80px;
     height: 80px;
     border-radius: 8px;
     cursor: pointer;
     object-fit: cover;
-    border: 2px solid #000; /* Fotoğraf çerçeve rengi siyah */
+    border: 2px solid #000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-item img:hover {
-    transform: scale(1.1); /* Fotoğraflara hover efekti ekleme */
+    transform: scale(1.1);
 }
 
 .timeline-item p {
-    margin-top: 10px; /* Çizgi ile metin arasındaki boşluğu artırır */
+    margin-top: 20px; /* Metin ve çizgi arasındaki boşluk artırıldı */
     margin-bottom: 10px;
-    padding: 5px; /* Metni çevreleyen boşlukları artırır */
-    font-size: 16px; /* Telefon ekranları için metni biraz daha büyük yapabiliriz */
-    line-height: 1.5; /* Satır yüksekliğini artırarak okunabilirliği sağlar */
-    color: #b07d4f; /* Metin rengini daha koyu bir altın tonu yaparak kontrastı artırır */
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b07d4f; /* Metin rengi */
+    z-index: 2; /* Metin için z-index artırıldı */
+    background-color: #2e2d2c; /* Çizginin altında metnin kaybolmaması için arka plan rengi eklendi */
 }
 
+/* Mobil uyumluluk */
 @media screen and (max-width: 768px) {
     .timeline-item p {
-        font-size: 15px; /* Mobilde metin boyutunu biraz küçültür */
-        line-height: 1.6; /* Satır yüksekliğini artırarak okunabilirliği sağlar */
-        padding: 8px; /* Metnin çevresindeki boşlukları biraz daha genişletir */
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 8px;
+        margin-top: 20px; /* Mobilde de metin ve çizgi arasındaki boşluk artırıldı */
     }
 
-    .timeline-item.left p, .timeline-item.right p {
-        margin-left: 10px; /* Mobilde metin için daha küçük bir kenar boşluğu */
-        margin-right: 10px;
-    }
-}
-}
     .timeline::before {
         left: 50%;
-        margin-left: -2px; /* Çubuğun merkezde kalması için margin ayarı */
+        margin-left: -2px;
     }
 
     .timeline-item.left, 
     .timeline-item.right {
-        align-items: center; /* Mobilde fotoğraf ve metni ortalama */
-        padding: 0; /* Mobilde padding sıfırlama */
-        text-align: center; /* Mobilde metni ortalama */
+        align-items: center;
+        padding: 0;
+        text-align: center;
     }
 
     .timeline-item img {
-        width: 60px; /* Mobilde fotoğraf boyutunu küçültme */
+        width: 60px;
         height: 60px;
     }
 
     .description {
-        font-size: 18px; /* Mobilde açıklama yazı boyutunu küçültme */
+        font-size: 18px;
     }
 
     .rules-header {
-        font-size: 20px; /* Mobilde başlık yazı boyutunu küçültme */
+        font-size: 20px;
     }
 
     .rules-list li {
-        font-size: 14px; /* Mobilde liste yazı boyutunu küçültme */
+        font-size: 14px;
     }
 }
