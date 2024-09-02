@@ -142,24 +142,28 @@ body {
     transform: scale(1.1); /* Fotoğraflara hover efekti ekleme */
 }
 
-/* Açıklama Cümlesi */
 .timeline-item p {
-    margin-top: 10px; /* Açıklama ve fotoğraf arasına mesafe ekleme */
-    color: #b07d4f; /* Biraz daha koyu altın renk açıklama cümlesi */
-    font-size: 19px; /* Yazı boyutunu biraz artırma */
-    font-weight: 750; /* Yazıyı daha kalın yapma */
-    text-align: center; /* Açıklamaların ortalanması için */
+    margin-top: 10px; /* Çizgi ile metin arasındaki boşluğu artırır */
+    margin-bottom: 10px;
+    padding: 5px; /* Metni çevreleyen boşlukları artırır */
+    font-size: 16px; /* Telefon ekranları için metni biraz daha büyük yapabiliriz */
+    line-height: 1.5; /* Satır yüksekliğini artırarak okunabilirliği sağlar */
+    color: #b07d4f; /* Metin rengini daha koyu bir altın tonu yaparak kontrastı artırır */
 }
 
-/* Mobil Uyumluluk */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .timeline-item p {
-        font-weight: 725; /* Yazıyı daha kalın yapma */
-        font-size: 17px; /* Yazı boyutunu biraz büyütme */
-        color: #b07d4f; /* Daha koyu bir altın renk */
+        font-size: 15px; /* Mobilde metin boyutunu biraz küçültür */
+        line-height: 1.6; /* Satır yüksekliğini artırarak okunabilirliği sağlar */
+        padding: 8px; /* Metnin çevresindeki boşlukları biraz daha genişletir */
+    }
+
+    .timeline-item.left p, .timeline-item.right p {
+        margin-left: 10px; /* Mobilde metin için daha küçük bir kenar boşluğu */
+        margin-right: 10px;
     }
 }
-
+}
     .timeline::before {
         left: 50%;
         margin-left: -2px; /* Çubuğun merkezde kalması için margin ayarı */
